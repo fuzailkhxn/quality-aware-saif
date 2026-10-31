@@ -146,6 +146,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Test exactly one training step (forward + loss + backprop + optimizer + prototype update)",
     )
+    parser.add_argument(
+        "--demo",
+        action="store_true",
+        help="Run lightweight CPU demonstration training on synthetic multi-identity data",
+    )
     return parser.parse_args()
 
 
@@ -780,6 +785,12 @@ def main() -> None:
             min_images=args.min_images,
             seed=args.seed,
         )
+        return
+
+    # CPU Demonstration Training Mode
+    if getattr(args, "demo", False):
+        from train_demo import run_cpu_demo_training
+        run_cpu_demo_training(epochs=epochs or 2)
         return
 
     # Single training step verification mode (exits after 1 step)

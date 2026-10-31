@@ -181,20 +181,43 @@ def evaluate_verification(
         tar = compute_tar_at_far(fpr, tpr, far)
         tar_at_far[f"TAR@FAR={far:.3f}"] = float(tar)
 
+    # Optimal threshold at EER point
+    optimal_thresh = float(thresholds[eer_idx]) if eer_idx < len(thresholds) else 0.5
+    binary_preds = (scores >= optimal_thresh).astype(int)
+    
+    # Calculate precision, recall, f1, accuracy at optimal threshold
+    from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
+    verif_acc = float(accuracy_score(pair_labels, binary_preds))
+    verif_prec = float(precision_score(pair_labels, binary_preds, zero_division=0))
+    verif_rec = float(recall_score(pair_labels, binary_preds, zero_division=0))
+    verif_f1 = float(f1_score(pair_labels, binary_preds, zero_division=0))
+
     results = {
         "auc": roc_auc,
         "eer": eer,
+        "optimal_threshold": optimal_thresh,
+        "accuracy": verif_acc,
+        "precision": verif_prec,
+        "recall": verif_rec,
+        "f1_score": verif_f1,
         "n_genuine_pairs": n_genuine,
         "n_impostor_pairs": n_impostor,
         "tar_at_far": tar_at_far,
+        "fpr": fpr.tolist(),
+        "tpr": tpr.tolist(),
+        "thresholds": thresholds.tolist(),
     }
 
     # Print results
     print("\n" + "=" * 50)
     print("  Face Verification Results")
     print("=" * 50)
-    print(f"  AUC  : {roc_auc:.4f}  (1.0 = perfect)")
-    print(f"  EER  : {eer:.4f}  (0.0 = perfect)")
+    print(f"  AUC        : {roc_auc:.4f}  (1.0 = perfect)")
+    print(f"  EER        : {eer:.4f}  (0.0 = perfect)")
+    print(f"  Accuracy   : {verif_acc:.4f}")
+    print(f"  Precision  : {verif_prec:.4f}")
+    print(f"  Recall     : {verif_rec:.4f}")
+    print(f"  F1-Score   : {verif_f1:.4f}")
     for key, val in tar_at_far.items():
         print(f"  {key}: {val:.4f}")
     print("=" * 50 + "\n")
@@ -206,10 +229,11 @@ def evaluate_verification(
         results["roc_plot_path"] = roc_plot_path
         print(f"[Evaluation] ROC curve saved -> {roc_plot_path}")
 
-    # Save JSON report
+    # Save JSON report (exclude large arrays from JSON)
+    report_results = {k: v for k, v in results.items() if k not in ("fpr", "tpr", "thresholds")}
     report_path = os.path.join(output_dir, "verification_report.json")
     with open(report_path, "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump(report_results, f, indent=2)
     results["report_path"] = report_path
     print(f"[Evaluation] Report saved -> {report_path}")
 
@@ -238,12 +262,16 @@ def evaluate_classification_accuracy(
 
     Returns
     -------
-    dict with keys: accuracy, per_class_accuracy
+    dict with keys: accuracy, precision, recall, f1_score, per_class_accuracy
     """
     similarities = embeddings @ prototypes.T   # (N, C)
     predicted = np.argmax(similarities, axis=1)
 
-    overall_acc = float((predicted == labels).mean())
+    from sklearn.metrics import precision_score, recall_score, f1_score, accuracy_score
+    overall_acc = float(accuracy_score(labels, predicted))
+    macro_prec = float(precision_score(labels, predicted, average="macro", zero_division=0))
+    macro_rec = float(recall_score(labels, predicted, average="macro", zero_division=0))
+    macro_f1 = float(f1_score(labels, predicted, average="macro", zero_division=0))
 
     unique_classes = np.unique(labels)
     per_class = {}
@@ -256,10 +284,13 @@ def evaluate_classification_accuracy(
 
     results = {
         "accuracy": overall_acc,
+        "precision": macro_prec,
+        "recall": macro_rec,
+        "f1_score": macro_f1,
         "per_class_accuracy": per_class,
     }
 
-    print(f"\n[Classification] Prototype-based Accuracy: {overall_acc:.4f}")
+    print(f"\n[Classification] Prototype-based Accuracy: {overall_acc:.4f} | F1: {macro_f1:.4f}")
     for c, acc in per_class.items():
         print(f"  Class {c}: {acc:.4f}")
 

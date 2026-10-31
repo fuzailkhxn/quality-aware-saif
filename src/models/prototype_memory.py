@@ -175,6 +175,9 @@ class PrototypeMemory:
         if self._update_counts.sum() > 0:
             self._initialised = True
 
+    # Convenience alias
+    update_prototypes = update
+
     # ------------------------------------------------------------------
     # Retrieval
     # ------------------------------------------------------------------
@@ -230,6 +233,17 @@ class PrototypeMemory:
             "embedding_dim": self.embedding_dim,
             "momentum": self.momentum,
         })
+
+    def load_from_file(self, path: str) -> "PrototypeMemory":
+        """Load state into current instance."""
+        data = np.load(path, allow_pickle=True).item()
+        self.num_classes = int(data["num_classes"])
+        self.embedding_dim = int(data["embedding_dim"])
+        self.momentum = float(data["momentum"])
+        self._prototypes = data["prototypes"]
+        self._update_counts = data["update_counts"]
+        self._initialised = True
+        return self
 
     @classmethod
     def load(cls, path: str) -> "PrototypeMemory":

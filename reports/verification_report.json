@@ -1,0 +1,17 @@
+{
+  "auc": 0.48,
+  "eer": 0.505,
+  "optimal_threshold": 0.989814043045044,
+  "accuracy": 0.49230769230769234,
+  "precision": 0.22727272727272727,
+  "recall": 0.5,
+  "f1_score": 0.3125,
+  "n_genuine_pairs": 60,
+  "n_impostor_pairs": 200,
+  "tar_at_far": {
+    "TAR@FAR=0.001": 0.0,
+    "TAR@FAR=0.010": 0.0,
+    "TAR@FAR=0.100": 0.08333333333333333
+  },
+  "roc_plot_path": "reports\\roc_curve.png"
+}
