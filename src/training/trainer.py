@@ -284,13 +284,12 @@ class QualityAwareTrainer:
             prototypes_tf = tf.constant(self.prototype_memory.get_prototypes(), dtype=tf.float32)
 
             if training:
-                loss_val, preds = self._train_step(
+                loss_val, preds, step_embeddings = self._train_step(
                     batch_images, batch_labels, quality_tf, prototypes_tf
                 )
                 # Update prototypes after each training step using quality-weighted EMA
-                embeddings_np = self.model(batch_images, training=False).numpy()
                 int_labels = np.argmax(batch_labels.numpy(), axis=1)
-                self.prototype_memory.update(embeddings_np, int_labels, quality)
+                self.prototype_memory.update(step_embeddings.numpy(), int_labels, quality)
             else:
                 loss_val, preds = self._val_step(
                     batch_images, batch_labels, quality_tf, prototypes_tf
@@ -321,7 +320,7 @@ class QualityAwareTrainer:
         labels: tf.Tensor,
         quality: tf.Tensor,
         prototypes: Optional[tf.Tensor] = None,
-    ) -> Tuple[tf.Tensor, tf.Tensor]:
+    ) -> Tuple[tf.Tensor, tf.Tensor, tf.Tensor]:
         vars_list = self.trainable_variables
         with tf.GradientTape() as tape:
             embeddings = self.model(images, training=True)
@@ -337,7 +336,7 @@ class QualityAwareTrainer:
         # For accuracy computation: cosine similarity logits
         W_norm = tf.math.l2_normalize(self.loss_fn.W, axis=0)
         logits = tf.matmul(tf.math.l2_normalize(embeddings, axis=1), W_norm)
-        return loss, logits
+        return loss, logits, embeddings
 
     def train_single_step(
         self,
@@ -355,10 +354,9 @@ class QualityAwareTrainer:
         quality_tf = tf.constant(quality, dtype=tf.float32)
         prototypes_tf = tf.constant(self.prototype_memory.get_prototypes(), dtype=tf.float32)
 
-        loss_val, preds = self._train_step(images, labels, quality_tf, prototypes_tf)
-        embeddings_np = self.model(images, training=False).numpy()
+        loss_val, preds, step_embeddings = self._train_step(images, labels, quality_tf, prototypes_tf)
         int_labels = np.argmax(labels.numpy(), axis=1)
-        self.prototype_memory.update(embeddings_np, int_labels, quality)
+        self.prototype_memory.update(step_embeddings.numpy(), int_labels, quality)
 
         pred_classes = tf.argmax(preds, axis=1)
         true_classes = tf.argmax(labels, axis=1)

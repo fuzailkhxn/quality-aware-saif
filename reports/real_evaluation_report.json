@@ -2,93 +2,116 @@
   "dataset_summary": {
     "classes": [
       "amir",
+      "ranbir",
       "saif",
       "salman",
       "sharuk"
     ],
-    "num_classes": 4,
-    "train_samples": 49,
-    "val_samples": 10,
-    "test_samples": 10,
-    "unknown_samples": 1,
-    "dataset_split_rule": "70% train / 15% val / 15% test identity-balanced, zero-leakage",
-    "adnan_status": "Excluded from 4-class training due to single image; used as unknown probe"
+    "num_classes": 5,
+    "train_samples": 205,
+    "val_samples": 43,
+    "test_samples": 44,
+    "total_images": 292,
+    "dataset_split_rule": "70% train / 15% val / 15% test stratified, zero-leakage",
+    "excluded_identities": "adnan and ranveer excluded due to low sample counts, preserved safely"
   },
   "training_details": {
     "model_architecture": "MobileNetV2 (512-d L2-normalized embedding head)",
     "execution_device": "CPU",
-    "epochs_trained": 11,
-    "batch_size": 7,
-    "total_time_seconds": 128.59,
-    "final_train_loss": 18.5331,
-    "final_train_acc": 0.8571,
-    "final_val_loss": 14.592,
-    "final_val_acc": 0.9,
-    "dense_weight_delta_l2": 3.920672,
-    "loss_w_delta_l2": 0.33875
+    "epochs_trained": 15,
+    "batch_size": 8,
+    "total_time_seconds": 159.72,
+    "final_train_loss": 15.6976,
+    "final_train_acc": 0.855,
+    "final_val_loss": 31.1545,
+    "final_val_acc": 0.6047,
+    "dense_weight_delta_l2": 8.170709,
+    "loss_w_delta_l2": 0.742741
   },
   "held_out_test_metrics": {
-    "sample_count": 10,
-    "accuracy": 0.6,
-    "macro_precision": 0.5,
-    "macro_recall": 0.4286,
-    "macro_f1": 0.4583,
+    "sample_count": 44,
+    "accuracy": 0.4773,
+    "macro_precision": 0.477,
+    "macro_recall": 0.487,
+    "macro_f1": 0.4632,
     "confusion_matrix": [
       [
+        8,
+        0,
+        0,
         1,
-        0,
-        0,
-        0
-      ],
-      [
-        0,
-        5,
-        2,
-        0
-      ],
-      [
-        0,
-        0,
-        0,
         1
       ],
       [
+        3,
+        3,
         0,
+        3,
+        0
+      ],
+      [
+        1,
+        0,
+        6,
+        0,
+        0
+      ],
+      [
+        3,
         0,
         1,
-        0
+        3,
+        2
+      ],
+      [
+        3,
+        3,
+        0,
+        2,
+        1
       ]
     ],
-    "per_class_f1": {
-      "amir": 1.0,
-      "saif": 0.8333,
-      "salman": 0.0,
-      "sharuk": 0.0
-    }
-  },
-  "verification_metrics_exploratory": {
-    "genuine_pairs_count": 21,
-    "impostor_pairs_count": 24,
-    "genuine_mean_sim": 0.3468,
-    "impostor_mean_sim": 0.1691,
-    "roc_auc": 0.7044,
-    "eer": 0.378,
-    "eer_threshold": 0.2965,
-    "note": "Reported as exploratory estimate due to small held-out test size (N=10)"
-  },
-  "unknown_probe_evaluation": [
-    {
-      "path": "dataset/adnan/person.jpg",
-      "similarities": {
-        "amir": 0.4046849012374878,
-        "saif": -0.2301436811685562,
-        "salman": 0.3541029691696167,
-        "sharuk": 0.5906982421875
+    "per_class_metrics": {
+      "amir": {
+        "precision": 0.4444,
+        "recall": 0.8,
+        "f1-score": 0.5714,
+        "support": 10.0
       },
-      "max_similarity": 0.5906982421875,
-      "closest_identity": "sharuk",
-      "rejected_at_0_60_threshold": true,
-      "rejected_at_0_70_threshold": true
+      "ranbir": {
+        "precision": 0.5,
+        "recall": 0.3333,
+        "f1-score": 0.4,
+        "support": 9.0
+      },
+      "saif": {
+        "precision": 0.8571,
+        "recall": 0.8571,
+        "f1-score": 0.8571,
+        "support": 7.0
+      },
+      "salman": {
+        "precision": 0.3333,
+        "recall": 0.3333,
+        "f1-score": 0.3333,
+        "support": 9.0
+      },
+      "sharuk": {
+        "precision": 0.25,
+        "recall": 0.1111,
+        "f1-score": 0.1538,
+        "support": 9.0
+      }
     }
-  ]
+  },
+  "verification_metrics": {
+    "total_pairs": 946,
+    "genuine_pairs_count": 174,
+    "impostor_pairs_count": 772,
+    "genuine_mean_sim": 0.2122,
+    "impostor_mean_sim": 0.0395,
+    "roc_auc": 0.6737,
+    "eer": 0.3904,
+    "eer_threshold": 0.1148
+  }
 }

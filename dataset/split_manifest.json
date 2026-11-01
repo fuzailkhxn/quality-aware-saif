@@ -1,30 +1,296 @@
 {
   "classes": [
     "amir",
+    "ranbir",
     "saif",
     "salman",
     "sharuk"
   ],
   "class_to_idx": {
     "amir": 0,
-    "saif": 1,
-    "salman": 2,
-    "sharuk": 3
+    "ranbir": 1,
+    "saif": 2,
+    "salman": 3,
+    "sharuk": 4
   },
   "splits": {
     "train": [
       {
-        "filename": "WhatsApp Image 2026-11-01 at 02.30.26.jpeg",
-        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.26.jpeg",
-        "sha256": "c2171c4a6e4bfc069dbc3b12f17a6c7cfeb15ab3b7d77f4e06f8c1214da48c13",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9154982566833496,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.25.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.25.jpeg",
+        "sha256": "743f08f7823274ddc723dc8bd23b6c847d402666b9d088758ed8b6581184838a",
+        "confidence": 0.9217778444290161,
         "face_box": [
-          447,
-          214,
-          335,
-          515
+          101,
+          61,
+          23,
+          30
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.19 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.19 (1).jpeg",
+        "sha256": "a7a7b91e3a1c7fa5de4df26ed56d2a58d238d7dc0704d42819f53185f2b0b3f9",
+        "confidence": 0.9305988550186157,
+        "face_box": [
+          156,
+          57,
+          105,
+          143
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.27.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.27.jpeg",
+        "sha256": "a3c8a4cf8c139adf8c5c2a0f1607d49bf758f4cc8d9ce28568cd27fd102d4da6",
+        "confidence": 0.9355584979057312,
+        "face_box": [
+          237,
+          81,
+          133,
+          184
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.24 (2).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.24 (2).jpeg",
+        "sha256": "937dca35742231aae7f9ac92ac9dde0bd075a92baa0be295d0da812917fe5e35",
+        "confidence": 0.9269356727600098,
+        "face_box": [
+          283,
+          51,
+          57,
+          72
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.18 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.18 (1).jpeg",
+        "sha256": "db98648a383632ebede5ec78a24a2a2f4af6f83d32f4293ad026a41f54575180",
+        "confidence": 0.9214007258415222,
+        "face_box": [
+          171,
+          59,
+          50,
+          64
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.35.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.35.jpeg",
+        "sha256": "f2f14c7baec8fcd80cd34d39cb3354a3978996d94d3bbea5523466f7955e3aae",
+        "confidence": 0.9077287912368774,
+        "face_box": [
+          105,
+          162,
+          151,
+          222
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.33.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.33.jpeg",
+        "sha256": "1624c7e837701df8373c41826fb60c00c532252bbf24adc0e4d38d2559f223cb",
+        "confidence": 0.922264814376831,
+        "face_box": [
+          130,
+          87,
+          64,
+          82
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.31.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.31.jpeg",
+        "sha256": "a2914a25e3c4d12e3646a4df94e797e4c4724ac11bac8b4695f2f15168f3b79f",
+        "confidence": 0.912064254283905,
+        "face_box": [
+          97,
+          192,
+          178,
+          198
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.27 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.27 (1).jpeg",
+        "sha256": "7df5a9a743e990bcda7edc04db3be468ef2fc0f1d9a3789077e4e17e3be30be5",
+        "confidence": 0.9161319732666016,
+        "face_box": [
+          287,
+          59,
+          32,
+          41
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.23 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.23 (1).jpeg",
+        "sha256": "9e6430bae53bfca5121cae8940cb310f40ad954d8389f31090e8c866deac4de5",
+        "confidence": 0.9266700148582458,
+        "face_box": [
+          122,
+          66,
+          110,
+          146
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.35 (2).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.35 (2).jpeg",
+        "sha256": "732a82d849cd5b0459a9412a534b560af2c701fa22c0d0f4931f192a36973a06",
+        "confidence": 0.9227727651596069,
+        "face_box": [
+          136,
+          112,
+          73,
+          94
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.23.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.23.jpeg",
+        "sha256": "8995574dac96984c52ec34658af9f1fb7cea61128ef84828ddf0761b066cfa98",
+        "confidence": 0.9173227548599243,
+        "face_box": [
+          373,
+          64,
+          155,
+          213
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.17.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.17.jpeg",
+        "sha256": "4dd304d745db65214a21b1afad1042d976b1ac35c13e9d806b69fa6847a64422",
+        "confidence": 0.9209758043289185,
+        "face_box": [
+          155,
+          80,
+          88,
+          107
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.20 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.20 (1).jpeg",
+        "sha256": "9259302f094cbce268b81beb82c983ffec251af62c108c6a4469d166043ac652",
+        "confidence": 0.9312445521354675,
+        "face_box": [
+          146,
+          50,
+          49,
+          64
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.12.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.12.jpeg",
+        "sha256": "d629ea24466e78abfe72e22a806479d15043ea15cdd2bc29e87eb571ee6af956",
+        "confidence": 0.8868876099586487,
+        "face_box": [
+          288,
+          139,
+          60,
+          80
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.16.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.16.jpeg",
+        "sha256": "2322b7704e653284e3b2c44df81e8d3a65c64ad543511d9abb4a44855b3d00ae",
+        "confidence": 0.9258506894111633,
+        "face_box": [
+          291,
+          77,
+          96,
+          119
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.13.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.13.jpeg",
+        "sha256": "4f985f4441f5a621479f610e27afa60aeea4a6e8f2ecbcd45377f48bae5ee43e",
+        "confidence": 0.8998041749000549,
+        "face_box": [
+          167,
+          102,
+          79,
+          101
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.18.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.18.jpeg",
+        "sha256": "a95249f9c54dd482fc3292a763f836917e2735e0c118afbb361ae2ce8878e201",
+        "confidence": 0.908726692199707,
+        "face_box": [
+          254,
+          81,
+          99,
+          123
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.30.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.30.jpeg",
+        "sha256": "112558b28841db85842d46e287d2b136c8e1f14014c045a507e863f52db3480d",
+        "confidence": 0.9309871196746826,
+        "face_box": [
+          165,
+          123,
+          74,
+          91
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.29.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.29.jpeg",
+        "sha256": "2b9f588ae335e9e20aaec293eacd24ecf431d9b7f1f930c10d0f87b99712a9e4",
+        "confidence": 0.9226166605949402,
+        "face_box": [
+          191,
+          64,
+          81,
+          108
         ],
         "identity": "amir",
         "label": 0
@@ -33,8 +299,6 @@
         "filename": "WhatsApp Image 2026-11-01 at 02.30.27 (2).jpeg",
         "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.27 (2).jpeg",
         "sha256": "1addb61652810bf019f429e81306b3ed56b6c62ee584987cc36af09ac12d3ff9",
-        "readable": true,
-        "face_detected": true,
         "confidence": 0.9054177403450012,
         "face_box": [
           346,
@@ -46,11 +310,37 @@
         "label": 0
       },
       {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.22.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.22.jpeg",
+        "sha256": "a01a5c28e1ed95ea081400be25df671f045f2d2d84e6bf3050b5936d511aed84",
+        "confidence": 0.9209285378456116,
+        "face_box": [
+          -1,
+          236,
+          84,
+          105
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.32 (2).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.32 (2).jpeg",
+        "sha256": "2d59946f68d3462802b2f76fbd455a1d7687a1c59f225b77ceb5453d508b28d0",
+        "confidence": 0.9196283221244812,
+        "face_box": [
+          169,
+          101,
+          99,
+          119
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
         "filename": "WhatsApp Image 2026-11-01 at 02.30.27.jpeg",
         "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.27.jpeg",
         "sha256": "33f8b5f09000252818173a53c218f06451839d1946c53e1200c3fa90b22bd67c",
-        "readable": true,
-        "face_detected": true,
         "confidence": 0.8657276630401611,
         "face_box": [
           430,
@@ -62,749 +352,107 @@
         "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 02.30.27 (1).jpeg",
-        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.27 (1).jpeg",
-        "sha256": "2ff72ee416f1fbac0b41a6015b75215bc6396fcd7667fe3d6f14284536660658",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8218012452125549,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.33 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.33 (1).jpeg",
+        "sha256": "652de39c26c701ce58dc2bd3ba2c99f4c805a18fdce7ce67332ac6260c707431",
+        "confidence": 0.9207431077957153,
         "face_box": [
-          218,
-          480,
-          455,
-          490
-        ],
-        "identity": "amir",
-        "label": 0
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 02.30.28.jpeg",
-        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.28.jpeg",
-        "sha256": "c77f8b6bd65f1a082c2cecd3d7b3c1b6536a89e6508ceaaa54eb83d2198045d0",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8232101202011108,
-        "face_box": [
-          379,
-          275,
-          339,
-          436
-        ],
-        "identity": "amir",
-        "label": 0
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.34 (2).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.34 (2).jpeg",
-        "sha256": "af464f05f6fa95af0408f25ae49a53b788d363f340855e405587ac2ea38fb8a9",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.709317147731781,
-        "face_box": [
-          361,
-          605,
-          81,
-          85
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.31 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.31 (1).jpeg",
-        "sha256": "70a84feb6373a3ace109526225e4540f22f25aefa2f81fa322e06b3c5517b02f",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9121606349945068,
-        "face_box": [
-          364,
-          327,
-          44,
-          56
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.27 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.27 (1).jpeg",
-        "sha256": "0806f54c5758e52d5341db2d051965cf8954d32e19547cec42958cdd82938cdc",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9318011403083801,
-        "face_box": [
-          349,
-          404,
-          34,
-          45
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.25.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.25.jpeg",
-        "sha256": "90c344a3d2809de261c940d1076c7f84f4d066fd98abcff4e4fe93d11ef2b1eb",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9195520281791687,
-        "face_box": [
-          284,
-          288,
-          52,
+          165,
+          80,
+          49,
           65
         ],
-        "identity": "saif",
-        "label": 1
+        "identity": "amir",
+        "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.27.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.27.jpeg",
-        "sha256": "070afaf8da2f2c3cba893391f4a514433c76e84d18f7ed89a3d3379d97055937",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9214417934417725,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.13 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.13 (1).jpeg",
+        "sha256": "f726f20d7cd1d3d944c6d5ee48d0e6b142ba51ce6c5818bffe495ce63b6f64e8",
+        "confidence": 0.928676962852478,
         "face_box": [
-          254,
-          233,
-          179,
-          218
+          174,
+          272,
+          91,
+          125
         ],
-        "identity": "saif",
-        "label": 1
+        "identity": "amir",
+        "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.29.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.29.jpeg",
-        "sha256": "fe0c9cd535933f2ecffd7b8061ba3ee9bf18cd27e9f38c07a3b175fae1fc570f",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.870688796043396,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.32 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.32 (1).jpeg",
+        "sha256": "ec892be16400fa7be0d3d49d8e0c1ae89e714f5f513aadd839714a5d092cb4a5",
+        "confidence": 0.9382769465446472,
         "face_box": [
-          349,
-          387,
-          39,
-          53
+          137,
+          92,
+          77,
+          107
         ],
-        "identity": "saif",
-        "label": 1
+        "identity": "amir",
+        "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.28 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.28 (1).jpeg",
-        "sha256": "24ab010e9225d71fa85285d559d272460c82e08ecd5d0824f50d18c5ec43a5ea",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9182153940200806,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.19.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.19.jpeg",
+        "sha256": "a46e20696d11ea55b671f20b1a618d00160fbac1b1293e52ecbf471663ae7877",
+        "confidence": 0.9232627749443054,
         "face_box": [
-          343,
-          405,
-          35,
-          44
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.24 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.24 (1).jpeg",
-        "sha256": "3bd74b98c25fff34d6a2c54df92ac4e99aeb4d6b24683d2f4d742895b1fed0f2",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9108797907829285,
-        "face_box": [
-          291,
-          417,
-          48,
-          60
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.36 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.36 (1).jpeg",
-        "sha256": "49147f929f1e3e6443d6254224d823e1e0fce3cc67094bebfd73858b4204edcd",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8890681266784668,
-        "face_box": [
-          347,
-          502,
-          69,
-          87
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.29 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.29 (1).jpeg",
-        "sha256": "0edf625c9fd183dc11570c978636125f55f1ce6fcddbd4d63f5e159e86de4a19",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8765149712562561,
-        "face_box": [
-          370,
-          373,
-          90,
-          143
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.24.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.24.jpeg",
-        "sha256": "802942a007ebd6d076bf153b445b9b7d723a71a4e3c52790fedb26075b12edfb",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8570418357849121,
-        "face_box": [
-          465,
-          436,
-          38,
-          58
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.35 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.35 (1).jpeg",
-        "sha256": "706c19de77a3c321fea42d12f0afc58fa4b20c6f9a95c34d880bc6d29635ef9b",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8945101499557495,
-        "face_box": [
-          316,
-          458,
-          63,
-          77
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.38 (2).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.38 (2).jpeg",
-        "sha256": "8b029916c2f5e4bc8d405876add53457049741a6bdbf8b64e4e35080af21f0c9",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9293721914291382,
-        "face_box": [
-          325,
-          182,
-          98,
-          143
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.39 (2).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.39 (2).jpeg",
-        "sha256": "0bc2b1325f8c212fe371579ec7fe51de1d7334ac7c11942cd8f2a1e480290615",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8954743146896362,
-        "face_box": [
-          397,
-          355,
-          42,
-          53
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.34 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.34 (1).jpeg",
-        "sha256": "c3333fbf19b63d3a5d9e4a7a3477b459acfb85a169f9006cd56158b4b72039da",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9005957841873169,
-        "face_box": [
-          449,
-          310,
-          116,
-          179
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.38 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.38 (1).jpeg",
-        "sha256": "937fad4ce68eafdef0bebc6f41fed1542e6ce44a683be8ce18d1e9466faa3113",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9168373346328735,
-        "face_box": [
-          398,
-          210,
-          110,
-          144
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.22 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.22 (1).jpeg",
-        "sha256": "175815cf0c8a812736cc4d320b249359220fa3a2f660550a00fd1e7a0135ee5a",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8692429661750793,
-        "face_box": [
-          473,
-          475,
-          32,
-          51
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.30 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.30 (1).jpeg",
-        "sha256": "1ef4daea5dae780b16d54ab807488e1e08f656f0bdcdb94978bf634afe17c4c0",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.902986466884613,
-        "face_box": [
-          365,
-          326,
-          42,
-          51
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.40 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.40 (1).jpeg",
-        "sha256": "e947d7b4343f86f31f9356dfe0e905b89df0d19417e6e636e721841962ee0d0f",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9308990836143494,
-        "face_box": [
-          140,
-          698,
-          266,
-          333
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.22.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.22.jpeg",
-        "sha256": "e7769f345e5202d96241ba6d7152d90cc28db340d72e3e0d2c3679b9ac27255f",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8054929971694946,
-        "face_box": [
-          260,
-          587,
-          46,
-          70
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.33.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.33.jpeg",
-        "sha256": "66f5c4acab0eb42adb7e0a68540c219f498cb8b31013564ef0d4442c1b66f167",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.913047194480896,
-        "face_box": [
-          300,
-          356,
-          97,
-          112
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.25 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.25 (1).jpeg",
-        "sha256": "1b284132d6606948adca587d4da33640880059fabeb01a70f6ac1e064f2acbac",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.917697548866272,
-        "face_box": [
-          259,
-          307,
-          51,
-          63
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.38.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.38.jpeg",
-        "sha256": "004d3182d1d52968e8f43b638631822ffda9bba93261c2c4780dd3282b9bf5e3",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8679147958755493,
-        "face_box": [
-          319,
-          317,
-          82,
-          119
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.30.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.30.jpeg",
-        "sha256": "dff1cd1229074f17970665560d21cab7b80e98909c13e5aca9e092c75fcf7d21",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9031433463096619,
-        "face_box": [
-          323,
-          284,
-          35,
-          52
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.36.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.36.jpeg",
-        "sha256": "e263e0cf3f9c6cb73bcb6291fefef697d4c18c1cb793aa5ab0641a9ea2b8fae2",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8971424698829651,
-        "face_box": [
-          336,
-          469,
-          58,
-          74
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.31 (2).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.31 (2).jpeg",
-        "sha256": "cef0c10bd52cbdd9c44ffdae07e449aeaad0c6ce27fd93030ec2417b408b9590",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8786082863807678,
-        "face_box": [
-          452,
-          315,
-          46,
-          67
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.20.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.20.jpeg",
-        "sha256": "b18903b9880bc735b7baa74914bf5083dad02e490ed564eb271626964519484f",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8836976289749146,
-        "face_box": [
-          222,
-          280,
-          103,
-          173
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.31.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.31.jpeg",
-        "sha256": "1a296e0b761163924593da05b7c6168d7e87ae0a8ebdc8bbfade4818321a779c",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8813068270683289,
-        "face_box": [
-          424,
-          389,
-          42,
-          56
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.40.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.40.jpeg",
-        "sha256": "95d1bc4e04b27e9fe1995ac56c9738ab8fdffd5bb86f153b9aced35e201c2029",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9288253784179688,
-        "face_box": [
-          298,
-          352,
-          104,
-          126
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.28.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.28.jpeg",
-        "sha256": "9039612232e51ae5447c6a26de54f1681297910ce9b85cafbe24c995cae367f1",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8741036653518677,
-        "face_box": [
-          317,
-          157,
-          59,
-          84
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.34 (3).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.34 (3).jpeg",
-        "sha256": "12107a03112464fdbdf4049ac5bfa1c4bd4e916daa84049850813571ab8ccf8e",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9258245825767517,
-        "face_box": [
-          245,
-          503,
-          292,
-          379
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.36 (2).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.36 (2).jpeg",
-        "sha256": "cae45d138361bcf9b9c900c5c1885f0732847f008eef51d3df0b30d70204abde",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9024366736412048,
-        "face_box": [
-          357,
-          407,
-          45,
-          55
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.32.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.32.jpeg",
-        "sha256": "51e39028b9d2fa2ff316580bbc740d92ea6280b38db89d638a6ff8a3a28a7a41",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9171764254570007,
-        "face_box": [
-          359,
-          320,
-          51,
-          58
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.26 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.26 (1).jpeg",
-        "sha256": "2ee90bf46b19259c912584996368de26fc3ea49951582ff815e5ce107b66902a",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9266421794891357,
-        "face_box": [
-          266,
-          392,
-          99,
-          133
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.37.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.37.jpeg",
-        "sha256": "92793c59c4a370741c5fe246a5147f0901797014bb52a6b1e0c38cbe0116731d",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.7656682729721069,
-        "face_box": [
-          -11,
-          559,
-          337,
-          443
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 02.20.59 (2).jpeg",
-        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.20.59 (2).jpeg",
-        "sha256": "77b4883d910bc40a42c859052949eb5bf8abe79f171d76d557874ffa47b8fa19",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9115252494812012,
-        "face_box": [
-          664,
-          159,
-          179,
+          96,
+          66,
+          181,
           242
         ],
-        "identity": "salman",
-        "label": 2
+        "identity": "amir",
+        "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 02.20.59 (1).jpeg",
-        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.20.59 (1).jpeg",
-        "sha256": "460780b0a711df465b6e30993bde0bc4aae34a6f4379758d695b39ee6d9bbdf5",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8949794769287109,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.29 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.29 (1).jpeg",
+        "sha256": "668c31c081310a6029122b86fedc69c22d4fc0b8818bf0c0be4707bed5a08534",
+        "confidence": 0.9208968877792358,
         "face_box": [
-          457,
-          440,
-          369,
-          454
+          134,
+          117,
+          155,
+          208
         ],
-        "identity": "salman",
-        "label": 2
+        "identity": "amir",
+        "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 02.21.00 (1).jpeg",
-        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.21.00 (1).jpeg",
-        "sha256": "d5f5f8a74699c67e988d6df0ee38abdeb68d8598830d22af4fb8c669befe51ee",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9301653504371643,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.20.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.20.jpeg",
+        "sha256": "381ec7a4c95026a1b448566eeaafb2b2b42c2c913411ef1443e093a8681c6592",
+        "confidence": 0.9490163326263428,
         "face_box": [
-          495,
-          235,
-          164,
-          262
+          271,
+          80,
+          109,
+          151
         ],
-        "identity": "salman",
-        "label": 2
+        "identity": "amir",
+        "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 02.20.59.jpeg",
-        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.20.59.jpeg",
-        "sha256": "2c5055bb551313db29eeb6f62fb02752221057cf16194ba6b9ef512c92535d1f",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8383293747901917,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.20 (2).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.20 (2).jpeg",
+        "sha256": "d9d042bbb7af322e8a62975916c1b3e009855b65a834eafd47e0f8cf6baa577b",
+        "confidence": 0.8960345983505249,
         "face_box": [
-          689,
-          320,
-          447,
-          562
+          155,
+          94,
+          91,
+          114
         ],
-        "identity": "salman",
-        "label": 2
+        "identity": "amir",
+        "label": 0
       },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 02.21.00 (2).jpeg",
-        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.21.00 (2).jpeg",
-        "sha256": "3d7519fd3bc0dc537fb3f96a05b449938be3d2276c5b904a95344618f22878ac",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8879508376121521,
-        "face_box": [
-          318,
-          42,
-          261,
-          376
-        ],
-        "identity": "salman",
-        "label": 2
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 02.28.15.jpeg",
-        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.15.jpeg",
-        "sha256": "c8fe9196f347a0a387ccc622a1e68bf2fb148ece10f2a64ad47d5065880fdadd",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9544985294342041,
-        "face_box": [
-          430,
-          228,
-          210,
-          273
-        ],
-        "identity": "sharuk",
-        "label": 3
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 02.28.16 (2).jpeg",
-        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.16 (2).jpeg",
-        "sha256": "a40592c8386eb456ed9c18b1bf1c11c96b7fa0414822fe6378b0094a6241c23e",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8494634628295898,
-        "face_box": [
-          495,
-          216,
-          343,
-          427
-        ],
-        "identity": "sharuk",
-        "label": 3
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 02.28.16 (1).jpeg",
-        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.16 (1).jpeg",
-        "sha256": "03df62b01267c2b91f48f8d252436272fe692560c868563371674179985ffb06",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9417870044708252,
-        "face_box": [
-          550,
-          310,
-          188,
-          252
-        ],
-        "identity": "sharuk",
-        "label": 3
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 02.28.16.jpeg",
-        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.16.jpeg",
-        "sha256": "5550d5641d7500acacd1240f56fbb0a5ac402f35d4116cf2de37e0a1f18077de",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.951045036315918,
-        "face_box": [
-          441,
-          226,
-          220,
-          305
-        ],
-        "identity": "sharuk",
-        "label": 3
-      }
-    ],
-    "val": [
       {
         "filename": "WhatsApp Image 2026-11-01 at 02.30.26 (1).jpeg",
         "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.26 (1).jpeg",
         "sha256": "694441ee4298027d1212fc6757ff1cb9f11b46b9ecc8f1b1549edfdc1eebf226",
-        "readable": true,
-        "face_detected": true,
         "confidence": 0.9294808506965637,
         "face_box": [
           335,
@@ -816,43 +464,891 @@
         "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.34.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.34.jpeg",
-        "sha256": "bf54726aee1eec974d94866d463c0e4a24804df737a73feb5756ff88e1f826a3",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.777833104133606,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.34 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.34 (1).jpeg",
+        "sha256": "f4c633e76aa66a48529680ad927f9dc5c988570234b39e5b2d9e2c39929bea70",
+        "confidence": 0.921379804611206,
         "face_box": [
-          417,
-          405,
-          69,
-          119
+          103,
+          98,
+          172,
+          251
         ],
-        "identity": "saif",
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.22 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.22 (1).jpeg",
+        "sha256": "33b8fffff6c53022ddc92f7975c3fc49ee61fd0c85269ebf2552d9f25bc039f4",
+        "confidence": 0.9151841402053833,
+        "face_box": [
+          412,
+          147,
+          103,
+          122
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.28 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.28 (1).jpeg",
+        "sha256": "903c2c7101955693dddf0a7ad9a8b2134d686517c01913c95b4bc1ab776eec2f",
+        "confidence": 0.9231632351875305,
+        "face_box": [
+          163,
+          128,
+          111,
+          143
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.21 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.21 (1).jpeg",
+        "sha256": "f287624ed20e37cc777bc4aea87e08fa9e4e64c623b878cd4ca871cab12f987e",
+        "confidence": 0.925200343132019,
+        "face_box": [
+          108,
+          89,
+          208,
+          277
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.31 (2).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.31 (2).jpeg",
+        "sha256": "ead2b8010933ec3bfcc378fecf8824c1e14317b4585beb794404c633846090dc",
+        "confidence": 0.923764169216156,
+        "face_box": [
+          288,
+          47,
+          84,
+          109
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.14 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.14 (1).jpeg",
+        "sha256": "096f59f2f0e0739eb57a12de120642caf16729659a93c16f585fab6f0cadd780",
+        "confidence": 0.9281737208366394,
+        "face_box": [
+          118,
+          80,
+          74,
+          96
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.25 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.25 (1).jpeg",
+        "sha256": "30dbce6eb10148ff70a0361ae0a1e1aa1907ce916cdb9ca4a12971c5edb202f9",
+        "confidence": 0.9453189373016357,
+        "face_box": [
+          131,
+          301,
+          137,
+          197
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.29 (2).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.29 (2).jpeg",
+        "sha256": "60aa2b73f1a065bbca2eeb60bbab8fffa7f0480f30c59cbeca15ce857d10582c",
+        "confidence": 0.916520893573761,
+        "face_box": [
+          11,
+          224,
+          71,
+          99
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.26.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.26.jpeg",
+        "sha256": "d0887a3ee81f6de0268bb62fbabc2084f00f5800a15defe45af1f452bc5d11d0",
+        "confidence": 0.9234448075294495,
+        "face_box": [
+          279,
+          49,
+          60,
+          68
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.24 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.24 (1).jpeg",
+        "sha256": "d5e3f84e8f38576fb432e454c39f53465f320a820bc9323f677e6bf75ff3f76c",
+        "confidence": 0.9538010954856873,
+        "face_box": [
+          89,
+          208,
+          163,
+          212
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.33 (2).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.33 (2).jpeg",
+        "sha256": "787bb797a4ad0851a1e9ab3d0dccee723f33f85b3cb9b5039a6ef5da6ba3ea59",
+        "confidence": 0.9368270039558411,
+        "face_box": [
+          155,
+          46,
+          73,
+          94
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.14.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.14.jpeg",
+        "sha256": "2105fc222d6f8065e906da9f6e5901ecc3d8f75953136e6519696f2a66368066",
+        "confidence": 0.9263126254081726,
+        "face_box": [
+          247,
+          50,
+          87,
+          115
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.46 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.46 (2).jpeg",
+        "sha256": "d177a0497a0374b18b4e1a907dee08cda7d5f3954fb68754f6a8db178e69ddec",
+        "confidence": 0.9222404956817627,
+        "face_box": [
+          179,
+          38,
+          47,
+          65
+        ],
+        "identity": "ranbir",
         "label": 1
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.26.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.26.jpeg",
-        "sha256": "8146078ae67f6e55da8a0234fbc6fdce98bc679a3ecd727c6d8d51930390663a",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8992828130722046,
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.59 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.59 (1).jpeg",
+        "sha256": "51eeed9912a7db111ddb37b2feba755d6efb9e0e6090aa2ae7b47b3e05de140c",
+        "confidence": 0.9369792938232422,
         "face_box": [
-          270,
-          356,
-          95,
+          259,
+          75,
+          72,
+          98
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.03 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.03 (1).jpeg",
+        "sha256": "590510dcf61e2b6d86f6fb07f76809b920e4d3937d311be4151c3ea1cf61280d",
+        "confidence": 0.9233720302581787,
+        "face_box": [
+          169,
+          47,
+          94,
+          129
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.50.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.50.jpeg",
+        "sha256": "818f65fc9b53b2e47228f66aacb7d23150a6ad1d30626e3acd1dc4ad3a86501e",
+        "confidence": 0.9115047454833984,
+        "face_box": [
+          328,
+          93,
+          78,
+          111
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.59.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.59.jpeg",
+        "sha256": "3088f8363340d16692e61afdb6c1a8f46ab1a417bee03a84c69f6f0d675427cb",
+        "confidence": 0.9308976531028748,
+        "face_box": [
+          189,
+          57,
+          44,
+          62
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.55 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.55 (2).jpeg",
+        "sha256": "474590074f043967c5e846ed0f4cce83ea1c4f6487598439b044a9e0821f5771",
+        "confidence": 0.9047665596008301,
+        "face_box": [
+          168,
+          73,
+          72,
+          95
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.49.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.49.jpeg",
+        "sha256": "331f4fa5afa022c02ffd11a0f643ac91d321d27f25890c2eef6d3498058c6b86",
+        "confidence": 0.9334179759025574,
+        "face_box": [
+          159,
+          61,
+          86,
+          119
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.58 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.58 (2).jpeg",
+        "sha256": "a2f0bc2b2c0a4ead4eac57e34c56ce0f7d4109d1d0ac7f707922fb70f9cfc0d5",
+        "confidence": 0.9244783520698547,
+        "face_box": [
+          155,
+          64,
+          91,
+          125
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.47.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.47.jpeg",
+        "sha256": "9dd538454118b1210a511e355ddd37a59f90bbd521c12dfd407f68235e2a6759",
+        "confidence": 0.919760525226593,
+        "face_box": [
+          139,
+          54,
+          51,
+          65
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.00 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.00 (1).jpeg",
+        "sha256": "474f4d9678c4aedcffb9cedad231b2fcebb788f90fce0e71955e9d832422451c",
+        "confidence": 0.9188948273658752,
+        "face_box": [
+          170,
+          180,
+          62,
+          87
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.48.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.48.jpeg",
+        "sha256": "3589b2c79270be80fb1e572916e9e598a70a2266b963467ffc17d2c2c4504710",
+        "confidence": 0.919385552406311,
+        "face_box": [
+          146,
+          49,
+          88,
+          117
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.47 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.47 (2).jpeg",
+        "sha256": "7c0f5a3feb9bca1615fd54df20b0509316cbbaf818917e517b2e50c87293d1ce",
+        "confidence": 0.9045445919036865,
+        "face_box": [
+          156,
+          62,
+          80,
+          118
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.50 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.50 (1).jpeg",
+        "sha256": "244e7283c4af432a3107097b16a3df6a4155912515489299cd45b3b58409f81d",
+        "confidence": 0.9193735718727112,
+        "face_box": [
+          184,
+          53,
+          44,
+          59
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.42.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.42.jpeg",
+        "sha256": "04482f1f90df92cd29fcdcf759ecf21307d5b1a806de4b3eed1d57836117465e",
+        "confidence": 0.9267447590827942,
+        "face_box": [
+          252,
+          56,
+          49,
+          66
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.02.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.02.jpeg",
+        "sha256": "3a0f09bb8c7519c8033d05968d812393889b84196327259655d7333eb0d66243",
+        "confidence": 0.9179078340530396,
+        "face_box": [
+          172,
+          53,
+          52,
+          72
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.01 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.01 (2).jpeg",
+        "sha256": "d1383a3c871b7f467b2dce398694aa5d90411f58baa6d5fca0380a93238b6492",
+        "confidence": 0.9180302619934082,
+        "face_box": [
+          173,
+          46,
+          49,
+          63
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.03.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.03.jpeg",
+        "sha256": "134ccc8218c2695f9e2c78f6d34f228d5174b91fcf1a56480859690bd4471b62",
+        "confidence": 0.9295710325241089,
+        "face_box": [
+          279,
+          67,
+          93,
+          127
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.58 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.58 (1).jpeg",
+        "sha256": "e3721402e785ca7fc56035c2b294251318ed280b28265ba9a1ee93c7ce81fc0e",
+        "confidence": 0.930031418800354,
+        "face_box": [
+          149,
+          74,
+          76,
+          96
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.53 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.53 (1).jpeg",
+        "sha256": "e27e94989740c0732d50fef73611e8c08c1db63cf9cc058e5cec958575ee3041",
+        "confidence": 0.9372850060462952,
+        "face_box": [
+          165,
+          56,
+          60,
+          86
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.03 (3).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.03 (3).jpeg",
+        "sha256": "aa6781c2fd4cdb81206b72c02798d90ace4c5f46f5a170d2dc9c712025edfe50",
+        "confidence": 0.9281202554702759,
+        "face_box": [
+          151,
+          68,
+          83,
+          111
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.45.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.45.jpeg",
+        "sha256": "a629cb789489625e1cdd03d790abd7484698c5bd0e22b2a739cb838d57f0aec4",
+        "confidence": 0.9430099129676819,
+        "face_box": [
+          164,
+          52,
+          69,
+          94
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.57 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.57 (1).jpeg",
+        "sha256": "3e6d835e7d30bc8fec9b9765f4bcadcc2c04fcb26fb7e42acfe7b026bdac8775",
+        "confidence": 0.917560875415802,
+        "face_box": [
+          150,
+          120,
+          52,
+          70
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.49 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.49 (2).jpeg",
+        "sha256": "fd7b7bbe901e9a88053d34968b115547f5ca96a00c0b4ebcb4f78e91729ae255",
+        "confidence": 0.9269023537635803,
+        "face_box": [
+          292,
+          34,
+          77,
+          105
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.47 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.47 (1).jpeg",
+        "sha256": "3175031aba973a33e29407af3cd7d9cb2ceb5bdeee917f3355fe26ab54487e00",
+        "confidence": 0.9202985167503357,
+        "face_box": [
+          168,
+          53,
+          49,
+          65
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.54 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.54 (1).jpeg",
+        "sha256": "e6aae5a60d8ca9aef76547f648aa0533ac1cc156a4e65b6b5b4b7de209149bf6",
+        "confidence": 0.9087082743644714,
+        "face_box": [
+          281,
+          63,
+          85,
+          111
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.48 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.48 (1).jpeg",
+        "sha256": "a3ec95d1889124b8227dcb254fb63cec26edb8a1cda1b9e2900328d26f5431ec",
+        "confidence": 0.9242517352104187,
+        "face_box": [
+          220,
+          140,
+          55,
+          72
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.52 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.52 (2).jpeg",
+        "sha256": "093c2dfbaf64f6de93bac41fc9e194ec84278c901906bd938298ffa7ffbfcd52",
+        "confidence": 0.9117993712425232,
+        "face_box": [
+          175,
+          75,
+          80,
+          107
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.48 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.48 (2).jpeg",
+        "sha256": "aa17201323e5a2daed25c68895e8bbbc7ba788ea93f71f62dde5c523a0efd242",
+        "confidence": 0.9063494205474854,
+        "face_box": [
+          254,
+          83,
+          127,
+          205
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.44.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.44.jpeg",
+        "sha256": "5ccab78f4be201019be97d5401db58c784a8d4089aef7599c7419e9421e7ccb6",
+        "confidence": 0.912972629070282,
+        "face_box": [
+          352,
+          61,
+          75,
+          100
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.55.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.55.jpeg",
+        "sha256": "5b1cdcc2948941c65d7f97c7ed0e5ab2385c460818e0b798dba74412aacbce28",
+        "confidence": 0.9292411804199219,
+        "face_box": [
+          256,
+          69,
+          65,
+          90
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.44 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.44 (2).jpeg",
+        "sha256": "2101f6344474d7c7ace1dc55b79d6cfdf7b2f2efd404402274ac77f7df581b54",
+        "confidence": 0.9401034712791443,
+        "face_box": [
+          238,
+          129,
+          173,
+          245
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.51.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.51.jpeg",
+        "sha256": "263c7b112c86c81778019d7dc4c6deef0b794526fb59c9f9ca954468f4321bd4",
+        "confidence": 0.9379788041114807,
+        "face_box": [
+          141,
+          70,
+          106,
+          152
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.45 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.45 (2).jpeg",
+        "sha256": "06006ca81fe04a693740d61a9da7f0ad2122420114c1957b7b034887dd21c251",
+        "confidence": 0.9201032519340515,
+        "face_box": [
+          237,
+          130,
+          140,
+          238
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.01 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.01 (1).jpeg",
+        "sha256": "1649bab7c0b5a61507098df1f73fab1e83b7620be64465b0ee4d7195ffb207c2",
+        "confidence": 0.92598557472229,
+        "face_box": [
+          149,
+          62,
+          85,
+          106
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.44 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.44 (1).jpeg",
+        "sha256": "83bdffef62d7a899e74c4b920b9c9c01f1f2a1df7bdc6ffc6d120316c37fea40",
+        "confidence": 0.9326210021972656,
+        "face_box": [
+          122,
+          100,
+          118,
+          156
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.46.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.46.jpeg",
+        "sha256": "4d12c799f8514d7de33b3fde77b3c62e2e20fca4b497f39597dc097ba6cf1f25",
+        "confidence": 0.9119780659675598,
+        "face_box": [
+          283,
+          50,
+          49,
+          62
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.52 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.52 (1).jpeg",
+        "sha256": "099f7ec38d5f75438d5b4c06a22656de96eeb95f2aa1a5da8408cf7b15822979",
+        "confidence": 0.9462883472442627,
+        "face_box": [
+          232,
+          80,
+          154,
+          214
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.01 (3).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.01 (3).jpeg",
+        "sha256": "b3a44a26a28fa583d72bb940ea41ad9c94196682e7f98f48879a6d253a2a80d0",
+        "confidence": 0.9228948950767517,
+        "face_box": [
+          399,
+          69,
+          54,
+          70
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.56 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.56 (1).jpeg",
+        "sha256": "0f794364a92fb2c13589955806fdb9b0a436ec0a1a51e3d741a8de56e26c75cf",
+        "confidence": 0.9295811653137207,
+        "face_box": [
+          166,
+          71,
+          60,
+          86
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.57.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.57.jpeg",
+        "sha256": "0c7d674b6d6b3f7220afbe20b8ebb09f72381813493e146b17b70032b581c8be",
+        "confidence": 0.9236244559288025,
+        "face_box": [
+          300,
+          68,
+          30,
+          41
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.01.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.01.jpeg",
+        "sha256": "763dd5bbc8af690bf9ff92d50669b2a33b60d135ddca84381741a4ee2ed94ea3",
+        "confidence": 0.9324657320976257,
+        "face_box": [
+          172,
+          86,
+          74,
+          98
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.34 (3).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.34 (3).jpeg",
+        "sha256": "12107a03112464fdbdf4049ac5bfa1c4bd4e916daa84049850813571ab8ccf8e",
+        "confidence": 0.9258245825767517,
+        "face_box": [
+          245,
+          503,
+          292,
+          379
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.27 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.27 (1).jpeg",
+        "sha256": "0806f54c5758e52d5341db2d051965cf8954d32e19547cec42958cdd82938cdc",
+        "confidence": 0.9318011403083801,
+        "face_box": [
+          349,
+          404,
+          34,
+          45
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.36 (3).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.36 (3).jpeg",
+        "sha256": "3f2dddab76c715091de2cb6807f852863864ccfcb9cec905045c084fa20cfce2",
+        "confidence": 0.8453677296638489,
+        "face_box": [
+          291,
+          392,
+          89,
+          122
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.36.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.36.jpeg",
+        "sha256": "e263e0cf3f9c6cb73bcb6291fefef697d4c18c1cb793aa5ab0641a9ea2b8fae2",
+        "confidence": 0.8971424698829651,
+        "face_box": [
+          336,
+          469,
+          58,
+          74
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.40 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.40 (1).jpeg",
+        "sha256": "e947d7b4343f86f31f9356dfe0e905b89df0d19417e6e636e721841962ee0d0f",
+        "confidence": 0.9308990836143494,
+        "face_box": [
+          140,
+          698,
+          266,
+          333
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.24 (2).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.24 (2).jpeg",
+        "sha256": "584470f1c7ee8adc704932421056039268898df243622b2e0be53dd8cbcf58c6",
+        "confidence": 0.9187920689582825,
+        "face_box": [
+          277,
+          392,
+          49,
+          61
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.27.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.27.jpeg",
+        "sha256": "070afaf8da2f2c3cba893391f4a514433c76e84d18f7ed89a3d3379d97055937",
+        "confidence": 0.9214417934417725,
+        "face_box": [
+          254,
+          233,
+          179,
+          218
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.31 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.31 (1).jpeg",
+        "sha256": "70a84feb6373a3ace109526225e4540f22f25aefa2f81fa322e06b3c5517b02f",
+        "confidence": 0.9121606349945068,
+        "face_box": [
+          364,
+          327,
+          44,
+          56
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.36 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.36 (1).jpeg",
+        "sha256": "49147f929f1e3e6443d6254224d823e1e0fce3cc67094bebfd73858b4204edcd",
+        "confidence": 0.8890681266784668,
+        "face_box": [
+          347,
+          502,
+          69,
+          87
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.40.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.40.jpeg",
+        "sha256": "95d1bc4e04b27e9fe1995ac56c9738ab8fdffd5bb86f153b9aced35e201c2029",
+        "confidence": 0.9288253784179688,
+        "face_box": [
+          298,
+          352,
+          104,
           126
         ],
         "identity": "saif",
-        "label": 1
+        "label": 2
       },
       {
         "filename": "WhatsApp Image 2026-11-01 at 01.53.26 (2).jpeg",
         "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.26 (2).jpeg",
         "sha256": "e91d1fa3542bebccf2a7e0a2628883e99e96c7dfea8e8f35ed956a087faeb781",
-        "readable": true,
-        "face_detected": true,
         "confidence": 0.9179773926734924,
         "face_box": [
           404,
@@ -861,62 +1357,54 @@
           62
         ],
         "identity": "saif",
-        "label": 1
+        "label": 2
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.39.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.39.jpeg",
-        "sha256": "746dc2af317ca41ae6b49a064d33a7349d073a36dfa036313d46b4cba5223396",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9015125036239624,
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.28 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.28 (1).jpeg",
+        "sha256": "24ab010e9225d71fa85285d559d272460c82e08ecd5d0824f50d18c5ec43a5ea",
+        "confidence": 0.9182153940200806,
         "face_box": [
-          406,
-          496,
-          95,
-          153
+          343,
+          405,
+          35,
+          44
         ],
         "identity": "saif",
-        "label": 1
+        "label": 2
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.21 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.21 (1).jpeg",
-        "sha256": "c9e0b988b5c65b8dee020ead4864be0fe8c49b290e17d7a9bf1b5b0c906fd8c3",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9101884961128235,
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.22.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.22.jpeg",
+        "sha256": "e7769f345e5202d96241ba6d7152d90cc28db340d72e3e0d2c3679b9ac27255f",
+        "confidence": 0.8054929971694946,
         "face_box": [
-          265,
-          417,
-          43,
-          53
+          260,
+          587,
+          46,
+          70
         ],
         "identity": "saif",
-        "label": 1
+        "label": 2
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.21.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.21.jpeg",
-        "sha256": "ed181d281b22ca56302091e2c266c4fa5da91ecb2aa4c04a848302e90becd539",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8585243225097656,
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.37.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.37.jpeg",
+        "sha256": "92793c59c4a370741c5fe246a5147f0901797014bb52a6b1e0c38cbe0116731d",
+        "confidence": 0.7656682729721069,
         "face_box": [
-          139,
-          334,
-          109,
-          191
+          -11,
+          559,
+          337,
+          443
         ],
         "identity": "saif",
-        "label": 1
+        "label": 2
       },
       {
         "filename": "WhatsApp Image 2026-11-01 at 01.53.33 (2).jpeg",
         "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.33 (2).jpeg",
         "sha256": "762c9b787074c6a27955a86e53855dd1ef84b31e15b4b7dea2299955d9fe603f",
-        "readable": true,
-        "face_detected": true,
         "confidence": 0.8478243350982666,
         "face_box": [
           302,
@@ -925,30 +1413,894 @@
           19
         ],
         "identity": "saif",
-        "label": 1
+        "label": 2
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 02.21.00.jpeg",
-        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.21.00.jpeg",
-        "sha256": "6d91d4aac5240782544bab4b72e47de08ad13d07c80315cb3583c5ed05c2c4d5",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9323904514312744,
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.34 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.34 (1).jpeg",
+        "sha256": "c3333fbf19b63d3a5d9e4a7a3477b459acfb85a169f9006cd56158b4b72039da",
+        "confidence": 0.9005957841873169,
+        "face_box": [
+          449,
+          310,
+          116,
+          179
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.22 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.22 (1).jpeg",
+        "sha256": "175815cf0c8a812736cc4d320b249359220fa3a2f660550a00fd1e7a0135ee5a",
+        "confidence": 0.8692429661750793,
+        "face_box": [
+          473,
+          475,
+          32,
+          51
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.23 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.23 (1).jpeg",
+        "sha256": "a52b95a778a77dd63b1cec64988acd763f68ee34e9228247e1708541b9ca2c96",
+        "confidence": 0.9161915183067322,
+        "face_box": [
+          215,
+          193,
+          59,
+          75
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.24.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.24.jpeg",
+        "sha256": "802942a007ebd6d076bf153b445b9b7d723a71a4e3c52790fedb26075b12edfb",
+        "confidence": 0.8570418357849121,
         "face_box": [
           465,
+          436,
+          38,
+          58
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.31.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.31.jpeg",
+        "sha256": "1a296e0b761163924593da05b7c6168d7e87ae0a8ebdc8bbfade4818321a779c",
+        "confidence": 0.8813068270683289,
+        "face_box": [
+          424,
+          389,
+          42,
+          56
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.21.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.21.jpeg",
+        "sha256": "ed181d281b22ca56302091e2c266c4fa5da91ecb2aa4c04a848302e90becd539",
+        "confidence": 0.8585243225097656,
+        "face_box": [
+          139,
+          334,
+          109,
+          191
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.39 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.39 (1).jpeg",
+        "sha256": "53807175c428ab2137c82d821c3327c116015a9973a054b7ebe2d8554f559b9e",
+        "confidence": 0.8441664576530457,
+        "face_box": [
+          302,
+          564,
+          71,
+          109
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.40 (2).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.40 (2).jpeg",
+        "sha256": "f00f6ba3a3210cb83d70e1ed0f11851315d9dc3cf3974103ae04afde2fab5b85",
+        "confidence": 0.9255805611610413,
+        "face_box": [
+          333,
+          432,
+          208,
+          252
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.30 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.30 (1).jpeg",
+        "sha256": "1ef4daea5dae780b16d54ab807488e1e08f656f0bdcdb94978bf634afe17c4c0",
+        "confidence": 0.902986466884613,
+        "face_box": [
+          365,
+          326,
+          42,
+          51
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.34 (2).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.34 (2).jpeg",
+        "sha256": "af464f05f6fa95af0408f25ae49a53b788d363f340855e405587ac2ea38fb8a9",
+        "confidence": 0.709317147731781,
+        "face_box": [
+          361,
+          605,
+          81,
+          85
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.38.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.38.jpeg",
+        "sha256": "004d3182d1d52968e8f43b638631822ffda9bba93261c2c4780dd3282b9bf5e3",
+        "confidence": 0.8679147958755493,
+        "face_box": [
+          319,
+          317,
+          82,
+          119
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.33.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.33.jpeg",
+        "sha256": "66f5c4acab0eb42adb7e0a68540c219f498cb8b31013564ef0d4442c1b66f167",
+        "confidence": 0.913047194480896,
+        "face_box": [
+          300,
+          356,
+          97,
+          112
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.38 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.38 (1).jpeg",
+        "sha256": "937fad4ce68eafdef0bebc6f41fed1542e6ce44a683be8ce18d1e9466faa3113",
+        "confidence": 0.9168373346328735,
+        "face_box": [
+          398,
+          210,
+          110,
+          144
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.26 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.26 (1).jpeg",
+        "sha256": "2ee90bf46b19259c912584996368de26fc3ea49951582ff815e5ce107b66902a",
+        "confidence": 0.9266421794891357,
+        "face_box": [
+          266,
+          392,
           99,
-          171,
-          232
+          133
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.29.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.29.jpeg",
+        "sha256": "fe0c9cd535933f2ecffd7b8061ba3ee9bf18cd27e9f38c07a3b175fae1fc570f",
+        "confidence": 0.870688796043396,
+        "face_box": [
+          349,
+          387,
+          39,
+          53
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.30.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.30.jpeg",
+        "sha256": "dff1cd1229074f17970665560d21cab7b80e98909c13e5aca9e092c75fcf7d21",
+        "confidence": 0.9031433463096619,
+        "face_box": [
+          323,
+          284,
+          35,
+          52
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.29 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.29 (1).jpeg",
+        "sha256": "0edf625c9fd183dc11570c978636125f55f1ce6fcddbd4d63f5e159e86de4a19",
+        "confidence": 0.8765149712562561,
+        "face_box": [
+          370,
+          373,
+          90,
+          143
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.34.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.34.jpeg",
+        "sha256": "bf54726aee1eec974d94866d463c0e4a24804df737a73feb5756ff88e1f826a3",
+        "confidence": 0.777833104133606,
+        "face_box": [
+          417,
+          405,
+          69,
+          119
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.25 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.25 (1).jpeg",
+        "sha256": "1b284132d6606948adca587d4da33640880059fabeb01a70f6ac1e064f2acbac",
+        "confidence": 0.917697548866272,
+        "face_box": [
+          259,
+          307,
+          51,
+          63
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.23.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.23.jpeg",
+        "sha256": "95b9b8623406691ccdd56a2ef087e5967137cd74af717c6d5d8bc74007771663",
+        "confidence": 0.9131614565849304,
+        "face_box": [
+          369,
+          417,
+          39,
+          48
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.21.01.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.21.01.jpeg",
+        "sha256": "f48567f080155f49b772a05f3117a21ad94a2b82f1d10673e4f4ba06606fdaf4",
+        "confidence": 0.9428704977035522,
+        "face_box": [
+          508,
+          74,
+          184,
+          282
         ],
         "identity": "salman",
-        "label": 2
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.34 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.34 (2).jpeg",
+        "sha256": "ad901120b5a35adce020ef215aa23e1f2c9e32c43bf6d6b189e99d482cfb4658",
+        "confidence": 0.9324483275413513,
+        "face_box": [
+          144,
+          90,
+          99,
+          129
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.42 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.42 (2).jpeg",
+        "sha256": "89b071f4859881e01fbb9d0c6c0e15297419ab35309ce6353c7e989f67f385ba",
+        "confidence": 0.9252220988273621,
+        "face_box": [
+          260,
+          45,
+          55,
+          74
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.46 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.46 (2).jpeg",
+        "sha256": "e5a2bc6026e0e7fae3d38514ebf92fdb9cee8c167407153d572b1e7b6f38b3ac",
+        "confidence": 0.9355226159095764,
+        "face_box": [
+          216,
+          40,
+          51,
+          74
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.44 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.44 (2).jpeg",
+        "sha256": "e3d170c12dafa6da832d8f7764e02fecd0bfaf9ca3cefb500b1e7b06c7cdac1b",
+        "confidence": 0.9323349595069885,
+        "face_box": [
+          168,
+          54,
+          76,
+          109
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.43 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.43 (1).jpeg",
+        "sha256": "e5e5efc3b93f70a8b1b0988c94997671ae52792914f47cff4a963bed32ec0bc9",
+        "confidence": 0.9276648759841919,
+        "face_box": [
+          164,
+          35,
+          50,
+          71
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.40 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.40 (1).jpeg",
+        "sha256": "4bd91d553574458bbeba1b32c72fc7b2ef200ee7e9c787669f677282b504bdbf",
+        "confidence": 0.9208406805992126,
+        "face_box": [
+          266,
+          152,
+          73,
+          96
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.34 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.34 (1).jpeg",
+        "sha256": "7fd406bda91e8f43ec2c9475f90dea9bd9313222e4ac893d67a2eed7bf793b4c",
+        "confidence": 0.9458149075508118,
+        "face_box": [
+          238,
+          64,
+          102,
+          141
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.47 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.47 (1).jpeg",
+        "sha256": "d0651be040787861d429c8f42e7da90a8e5cab0dceee82dd8597552b9a3b7e4e",
+        "confidence": 0.9260975122451782,
+        "face_box": [
+          155,
+          94,
+          75,
+          102
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.49 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.49 (2).jpeg",
+        "sha256": "1688fe939a32e0fba556b03df26f279493dad552cc0b816c1ef4ef7c0c7e440b",
+        "confidence": 0.9180126190185547,
+        "face_box": [
+          253,
+          45,
+          87,
+          111
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.37.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.37.jpeg",
+        "sha256": "951af4ebbec54458127350eb3ededd7104a97d6e3b219df3f9e88ed9b75f9053",
+        "confidence": 0.922916054725647,
+        "face_box": [
+          188,
+          41,
+          80,
+          110
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.42.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.42.jpeg",
+        "sha256": "d83fafe87435e640a8366bcb583d2d668dd9d20ce700aeeca6318d4b83718c26",
+        "confidence": 0.9288941621780396,
+        "face_box": [
+          281,
+          103,
+          54,
+          73
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.43 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.43 (2).jpeg",
+        "sha256": "aa8dc46967b7a3dc181b168b0d61cc35555bb27820d76204f9848d541c0224c0",
+        "confidence": 0.9237298369407654,
+        "face_box": [
+          178,
+          47,
+          49,
+          66
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.50 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.50 (1).jpeg",
+        "sha256": "44b0519fdb01c273bf3375ad994055995c4e26de2ab8794e54bb4090b033343e",
+        "confidence": 0.9356115460395813,
+        "face_box": [
+          299,
+          65,
+          103,
+          149
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.46.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.46.jpeg",
+        "sha256": "c1172bb665dc972f21e9ed2ff0206ba733b841971b6b8089b56abcfd94a42db5",
+        "confidence": 0.943742036819458,
+        "face_box": [
+          213,
+          99,
+          175,
+          239
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.49 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.49 (1).jpeg",
+        "sha256": "a9e0079cc102323171cfcf9c79612654c18c52f760d47e72f1183caba5fb2508",
+        "confidence": 0.9332664012908936,
+        "face_box": [
+          283,
+          69,
+          104,
+          144
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.40 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.40 (2).jpeg",
+        "sha256": "7fab25a50510d3c53dd4922c7ccf1a2470bb1dfa122a3245116d269fec105f93",
+        "confidence": 0.9292950630187988,
+        "face_box": [
+          121,
+          230,
+          64,
+          84
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.50 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.50 (2).jpeg",
+        "sha256": "5dabd76bbe30e70621d18f993708092fd16223e91b4e6f8de74891b3bff560f9",
+        "confidence": 0.9429248571395874,
+        "face_box": [
+          183,
+          101,
+          72,
+          98
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.33 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.33 (1).jpeg",
+        "sha256": "b0f395b5838371d110efaf0e642ecffda222c2af0c692a2817ff117daedab1bf",
+        "confidence": 0.9437310695648193,
+        "face_box": [
+          246,
+          64,
+          98,
+          140
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.36.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.36.jpeg",
+        "sha256": "3754ea3d85f21c1cb73503b66bfed091d60d2f8ec400f0e268457f4dd20fec8d",
+        "confidence": 0.9334877133369446,
+        "face_box": [
+          179,
+          63,
+          61,
+          86
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.38.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.38.jpeg",
+        "sha256": "84324c4160b434670c7fcd9593ce0890154560176056e14a3d351f5209517ac5",
+        "confidence": 0.9306356906890869,
+        "face_box": [
+          162,
+          32,
+          62,
+          89
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.47.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.47.jpeg",
+        "sha256": "d311b9472e74e490df52e3e798ba898f67378f80d54b64b9a3b42e62e10a0618",
+        "confidence": 0.9441088438034058,
+        "face_box": [
+          167,
+          95,
+          98,
+          143
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.41.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.41.jpeg",
+        "sha256": "58e979a53deb0328c90d5eae5219c17484a12296771c18d73339ae094f447154",
+        "confidence": 0.9217196106910706,
+        "face_box": [
+          261,
+          89,
+          68,
+          92
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.43.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.43.jpeg",
+        "sha256": "a116220916091db18cfd3356431c6768bc74a40160cc9e60a543b522f8373a36",
+        "confidence": 0.9340747594833374,
+        "face_box": [
+          116,
+          34,
+          59,
+          79
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.42 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.42 (1).jpeg",
+        "sha256": "7d02d0692bf2ac0990f911cabfcc0a4b4e3690ac53a8ae880353edd3de7a4ed4",
+        "confidence": 0.938991129398346,
+        "face_box": [
+          146,
+          85,
+          83,
+          125
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.48 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.48 (1).jpeg",
+        "sha256": "64dc57a2209ccb7114506aaeff3deeab7ad374ce4da3f62b8d1a2c5888d17963",
+        "confidence": 0.9245849847793579,
+        "face_box": [
+          170,
+          66,
+          58,
+          83
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.38 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.38 (1).jpeg",
+        "sha256": "0b9226c42f41ed891ab8295e80554586c9022c71d0c805b208862197e73aa049",
+        "confidence": 0.9348270893096924,
+        "face_box": [
+          176,
+          43,
+          77,
+          111
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.38 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.38 (2).jpeg",
+        "sha256": "a5bbdceba0159ebd61deb10ec78ce3ac3373cf424c8827a9bc61fb3c82679722",
+        "confidence": 0.932267427444458,
+        "face_box": [
+          181,
+          45,
+          69,
+          92
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.50.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.50.jpeg",
+        "sha256": "f8fb2c094769a20ff6af11e304c0a4590fe0dce24a9df7d48044d17511e81b71",
+        "confidence": 0.9248865246772766,
+        "face_box": [
+          303,
+          41,
+          55,
+          73
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.46 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.46 (1).jpeg",
+        "sha256": "83b9ee9896cf0204d601cd677abadec49952b6c8f1930b8895316852732efbbe",
+        "confidence": 0.9481444954872131,
+        "face_box": [
+          237,
+          56,
+          123,
+          167
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.31.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.31.jpeg",
+        "sha256": "22d5d906945141b32fcded7fdaaac770ebd89db5693f93fc17f9a038d41ca30c",
+        "confidence": 0.9286701083183289,
+        "face_box": [
+          305,
+          77,
+          73,
+          92
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.32.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.32.jpeg",
+        "sha256": "c55c7999fc444fe8325b97e99837b21631035f9904d232a13dec90056bb4ca7a",
+        "confidence": 0.9255704879760742,
+        "face_box": [
+          147,
+          69,
+          46,
+          62
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.45.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.45.jpeg",
+        "sha256": "efb87bed2dfc2b791f0b96486fe26e7de7d0291810a235cc95aedfad6776d5d2",
+        "confidence": 0.9372264742851257,
+        "face_box": [
+          122,
+          39,
+          52,
+          70
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.21.00 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.21.00 (1).jpeg",
+        "sha256": "d5f5f8a74699c67e988d6df0ee38abdeb68d8598830d22af4fb8c669befe51ee",
+        "confidence": 0.9301653504371643,
+        "face_box": [
+          495,
+          235,
+          164,
+          262
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.45 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.45 (2).jpeg",
+        "sha256": "1b4d2e514c77ef77a25e5116b9dcc6198f482cb1272f13a75a92b448057c7c04",
+        "confidence": 0.9236090183258057,
+        "face_box": [
+          141,
+          106,
+          108,
+          131
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.51 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.51 (1).jpeg",
+        "sha256": "62801eeaddb34a8859675488abb43de6b40bbc6d15f2b50ea1399ef6ea93e9d0",
+        "confidence": 0.9284095168113708,
+        "face_box": [
+          166,
+          42,
+          57,
+          85
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.45 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.45 (1).jpeg",
+        "sha256": "d6595bc305799fa6b05889cc639af8eb526cd5af34ccf9500e8d74c235c4b29f",
+        "confidence": 0.8987699747085571,
+        "face_box": [
+          157,
+          97,
+          98,
+          131
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.39.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.39.jpeg",
+        "sha256": "c87d0648557e50eede5def95379c8b7fdbd33f7e76370f664632fe6d0c4b6166",
+        "confidence": 0.8635733127593994,
+        "face_box": [
+          349,
+          169,
+          65,
+          86
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.33.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.33.jpeg",
+        "sha256": "fd1918f43e571dd615c455567d84266fb67bb1067bebbb69c5bdbe58c896690d",
+        "confidence": 0.9388065338134766,
+        "face_box": [
+          180,
+          49,
+          67,
+          96
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.31 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.31 (1).jpeg",
+        "sha256": "00473f951c6bd306d941605b70fe6ebc21b96d942d4e5ff35e8a1445f2279cb4",
+        "confidence": 0.9157418608665466,
+        "face_box": [
+          168,
+          44,
+          48,
+          64
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.51.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.51.jpeg",
+        "sha256": "0652fb23ad62f37ae8c7e4730c3821b38d7de215e9a406105eb0ab1434235fb3",
+        "confidence": 0.956459641456604,
+        "face_box": [
+          201,
+          98,
+          102,
+          149
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.30.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.30.jpeg",
+        "sha256": "5cda9699b99805922e866eda48103498f8c5b430979e399b244d0a5979ebf5a9",
+        "confidence": 0.9328492879867554,
+        "face_box": [
+          178,
+          62,
+          75,
+          109
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.48.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.48.jpeg",
+        "sha256": "4d47e1b7cb7e12c6df87a279c29ff8a3feec3c43cd1a46f057bf1f4e2828b92e",
+        "confidence": 0.9289606213569641,
+        "face_box": [
+          176,
+          76,
+          78,
+          101
+        ],
+        "identity": "salman",
+        "label": 3
       },
       {
         "filename": "WhatsApp Image 2026-11-01 at 02.28.15 (1).jpeg",
         "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.15 (1).jpeg",
         "sha256": "969da071e41f8974f803182d9ac88bb68c3915bb3907e772a55008ae079f96cf",
-        "readable": true,
-        "face_detected": true,
         "confidence": 0.9279494881629944,
         "face_box": [
           444,
@@ -957,16 +2309,658 @@
           411
         ],
         "identity": "sharuk",
-        "label": 3
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.56.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.56.jpeg",
+        "sha256": "13a286541490cc73139d1db1cb9febd82a15aa106fa043cdf346c33816b1b7ac",
+        "confidence": 0.9410770535469055,
+        "face_box": [
+          245,
+          106,
+          69,
+          89
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.55.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.55.jpeg",
+        "sha256": "2993eaf6d29614af228e478a98dec53a8953f1fcbc66bc7826323f26d8daf18a",
+        "confidence": 0.9275273084640503,
+        "face_box": [
+          163,
+          91,
+          127,
+          180
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.57 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.57 (1).jpeg",
+        "sha256": "177c3d69d9c630c031d943a8bfc0fa141a6c50c28ac198ce6f52d6c3d13d7721",
+        "confidence": 0.9111748337745667,
+        "face_box": [
+          156,
+          50,
+          48,
+          62
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.53 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.53 (1).jpeg",
+        "sha256": "dcda202c60e2c5db0161dfc2b9f670fa674d5144c055622db23c98b6906a6bf5",
+        "confidence": 0.9153416156768799,
+        "face_box": [
+          276,
+          111,
+          44,
+          58
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.52 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.52 (1).jpeg",
+        "sha256": "7a985115d9b6a0c8a24ca14f17202604b729373c63aed917922488eb685d3400",
+        "confidence": 0.9324770569801331,
+        "face_box": [
+          255,
+          158,
+          39,
+          46
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.40.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.40.jpeg",
+        "sha256": "0f0f5ae4ecbfae66381b4479ae5e04790effae6d3350d0feccb065a853c873da",
+        "confidence": 0.9435571432113647,
+        "face_box": [
+          151,
+          151,
+          182,
+          216
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.48 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.48 (1).jpeg",
+        "sha256": "7f2b2c78d002f4bb3199126f5ffbc3470f7a2e31b3cbeda8740178b6da4aa806",
+        "confidence": 0.9270498156547546,
+        "face_box": [
+          175,
+          66,
+          46,
+          62
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.43 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.43 (1).jpeg",
+        "sha256": "57a157b116a349b1b015659c78608111b4becc86c4e4b8e1e4d404266bb8a4e2",
+        "confidence": 0.9283522367477417,
+        "face_box": [
+          196,
+          62,
+          43,
+          56
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.43 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.43 (2).jpeg",
+        "sha256": "8c819ce0f3fc2d3df44f7fa54d4d465e0d13f716c5efbf9ff3a4a6699ea5d0e6",
+        "confidence": 0.9269207119941711,
+        "face_box": [
+          138,
+          85,
+          91,
+          113
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.55 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.55 (2).jpeg",
+        "sha256": "52ceab931e6f21ae08765e0a073f23063775ef6b53fc7ea479201ad6b0e20f8e",
+        "confidence": 0.9284570813179016,
+        "face_box": [
+          157,
+          110,
+          70,
+          95
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.53 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.53 (2).jpeg",
+        "sha256": "ab1b70314a0e3967b25c53efbe775842dcfd5958adc7878ea774d2050dcfb32c",
+        "confidence": 0.9138709306716919,
+        "face_box": [
+          185,
+          72,
+          43,
+          54
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.50 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.50 (2).jpeg",
+        "sha256": "1fe9ae8b65660e89920f85c172a7d8815a4e77ab4f4fa96f5f2957ebf2347bb4",
+        "confidence": 0.891217827796936,
+        "face_box": [
+          371,
+          76,
+          50,
+          59
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.54 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.54 (1).jpeg",
+        "sha256": "74a9da7a94a780dd931ce965b5a009ad91dcb997d00ca5fa567b7e9f53819ce0",
+        "confidence": 0.9243062138557434,
+        "face_box": [
+          98,
+          95,
+          76,
+          99
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.49 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.49 (1).jpeg",
+        "sha256": "ffb4bd97d972ada7e9d24f5ad55413ecd8feffa469265ab7f7fd2cf0dc4a3d8a",
+        "confidence": 0.9361105561256409,
+        "face_box": [
+          176,
+          51,
+          57,
+          81
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.55 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.55 (1).jpeg",
+        "sha256": "ab1969e8d974e260284cc2ab4f049e22831315818e536a9e0d86605a8d028155",
+        "confidence": 0.9433290362358093,
+        "face_box": [
+          164,
+          50,
+          64,
+          84
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.49 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.49 (2).jpeg",
+        "sha256": "91ff7d84e1ebe19ee6af3da9f0521102bd60a3ccc6a7dead7939bb842137d664",
+        "confidence": 0.9289113879203796,
+        "face_box": [
+          155,
+          30,
+          159,
+          192
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.44.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.44.jpeg",
+        "sha256": "2ee87bcdcbf7889f3d5977c11d4ae06bea0c727a255abb5c296b815d7e01edbc",
+        "confidence": 0.9441683888435364,
+        "face_box": [
+          158,
+          95,
+          141,
+          181
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.42.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.42.jpeg",
+        "sha256": "1a5f60ae18fb281f39ebd4076f384a8864299779791a00191d636f20ea3a5fe8",
+        "confidence": 0.922256350517273,
+        "face_box": [
+          392,
+          160,
+          42,
+          55
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.41 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.41 (1).jpeg",
+        "sha256": "76f7c774c53e7f689f8bf0da370f5eb718f122ec7da5a9c7dcd6553bab1bf30c",
+        "confidence": 0.9272643327713013,
+        "face_box": [
+          238,
+          152,
+          89,
+          120
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.43.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.43.jpeg",
+        "sha256": "769b8920abc7354f2d83af5e5168cff436907537a2741e9363897e4a751fc0a5",
+        "confidence": 0.8945683240890503,
+        "face_box": [
+          145,
+          188,
+          92,
+          100
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.54.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.54.jpeg",
+        "sha256": "6917a2694f7781887571faa1ee962d261a0409a214256253c30ddd9aee29820a",
+        "confidence": 0.895837664604187,
+        "face_box": [
+          274,
+          183,
+          132,
+          201
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.45.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.45.jpeg",
+        "sha256": "d177457a31a81e1d57f26ba1678b108b9a96966c3089e817aed641caadfcf0b1",
+        "confidence": 0.9267098903656006,
+        "face_box": [
+          343,
+          152,
+          50,
+          70
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.45 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.45 (1).jpeg",
+        "sha256": "cf072c03f79cfb3f57000caa481a7c56437b3c1a91adcfc0d1ba68fd4c3566c2",
+        "confidence": 0.9205073118209839,
+        "face_box": [
+          264,
+          91,
+          40,
+          50
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.47 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.47 (1).jpeg",
+        "sha256": "412128772700cac425b8ef340c7dd804450965ae2a03776ab7d404e212a7026d",
+        "confidence": 0.9250575304031372,
+        "face_box": [
+          369,
+          108,
+          36,
+          44
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.50.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.50.jpeg",
+        "sha256": "dfc8aa2d009a4e742de943a6b9cee3e6853bb156923f5aec2847d794ac87646e",
+        "confidence": 0.930323600769043,
+        "face_box": [
+          185,
+          193,
+          112,
+          132
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.49.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.49.jpeg",
+        "sha256": "46775f9562aded04f484d1cf90ff1d92318f305302009a55c9cda9c31a83d5ef",
+        "confidence": 0.898995041847229,
+        "face_box": [
+          403,
+          76,
+          45,
+          61
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.56 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.56 (2).jpeg",
+        "sha256": "a8c7dad11965ad2f118c80b86352f39fc88efe9927314d35035c211e02c7a020",
+        "confidence": 0.9367925524711609,
+        "face_box": [
+          255,
+          151,
+          152,
+          193
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.48.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.48.jpeg",
+        "sha256": "0cc22747694839c016ed687234fdf00907a6eb1c2bdd17e7b19713649df5ec3e",
+        "confidence": 0.860345721244812,
+        "face_box": [
+          278,
+          55,
+          47,
+          68
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.58.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.58.jpeg",
+        "sha256": "2d801b1856fb4db287c05af4ec0f20f20cb76f0576f1782f2c1208d1ec0abfeb",
+        "confidence": 0.9351127743721008,
+        "face_box": [
+          317,
+          77,
+          102,
+          130
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.44 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.44 (2).jpeg",
+        "sha256": "83093b095940991f5c642525bb6a17ca2b044ce69af3543f945ccb98704ef947",
+        "confidence": 0.8940414786338806,
+        "face_box": [
+          148,
+          93,
+          69,
+          85
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.57 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.57 (2).jpeg",
+        "sha256": "f63ac91765b71ba5ced84ae700eb0abb9e30c4a25fc4ea4db5743653d1652001",
+        "confidence": 0.9324672818183899,
+        "face_box": [
+          213,
+          112,
+          67,
+          87
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.47.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.47.jpeg",
+        "sha256": "4aef8c99a1237030f223a3c8c27a38f83ad4a7763f9b33a444da6ae7dd109cfd",
+        "confidence": 0.9274488091468811,
+        "face_box": [
+          374,
+          50,
+          68,
+          91
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.50 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.50 (1).jpeg",
+        "sha256": "2a0bddeed5b57c22cc8b6026962b7c3c0c8c170346cb6af27bb78e7ddb126850",
+        "confidence": 0.917214035987854,
+        "face_box": [
+          190,
+          92,
+          38,
+          51
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.38.00 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.38.00 (1).jpeg",
+        "sha256": "a5c12b881a685999a0389bde99522102dd4880497b8db789b1d72671f4487853",
+        "confidence": 0.9118502736091614,
+        "face_box": [
+          309,
+          49,
+          47,
+          60
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.28.17.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.17.jpeg",
+        "sha256": "57204296e518472e22d00dd672ba7f46d64408533e76bc2685667588afd0a0d6",
+        "confidence": 0.9391353130340576,
+        "face_box": [
+          357,
+          262,
+          131,
+          163
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.46.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.46.jpeg",
+        "sha256": "a2e446dc42f786e30bbf9d9a0aeeff96cc753857c0eb2d5ce071c6b78c35ea1f",
+        "confidence": 0.930804967880249,
+        "face_box": [
+          160,
+          53,
+          61,
+          79
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.57.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.57.jpeg",
+        "sha256": "46012131749143c3c19b8b2c60b25821bf38ed248a2da9bb69cf327f1b8a684b",
+        "confidence": 0.9057450890541077,
+        "face_box": [
+          181,
+          75,
+          48,
+          68
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.45 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.45 (2).jpeg",
+        "sha256": "0562c69d1dad6d4322418bd6bbd298e08d4e9a23d0f01b2added0769a42b780b",
+        "confidence": 0.9153711199760437,
+        "face_box": [
+          318,
+          80,
+          101,
+          129
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.51.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.51.jpeg",
+        "sha256": "00867a3d85aa238bcc6f188eaf91efe2804f00ff2b7fea7803adea3ca4f9e244",
+        "confidence": 0.9239925146102905,
+        "face_box": [
+          320,
+          75,
+          93,
+          120
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.41.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.41.jpeg",
+        "sha256": "a2af59b781acb087f73ce1d8fd04aab97185d36fe99ee14e035066f455b9a6e8",
+        "confidence": 0.9277095198631287,
+        "face_box": [
+          219,
+          165,
+          42,
+          53
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.56 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.56 (1).jpeg",
+        "sha256": "4a6d0f0c18fab89d420379500e18da8ab443069faf4d7ef4ad06d086a4d7b354",
+        "confidence": 0.9313331246376038,
+        "face_box": [
+          190,
+          59,
+          46,
+          57
+        ],
+        "identity": "sharuk",
+        "label": 4
       }
     ],
-    "test": [
+    "val": [
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.31 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.31 (1).jpeg",
+        "sha256": "9fa0488cdc72b04d738f82b6fc9f1f6418b53deaf364647c0983828172fbaf38",
+        "confidence": 0.9085754156112671,
+        "face_box": [
+          331,
+          69,
+          98,
+          119
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.35 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.35 (1).jpeg",
+        "sha256": "ab73d2a2d70cf44f98c2db02dd7de7878f4c4e6989eb2f19a86b6681b7262def",
+        "confidence": 0.951241135597229,
+        "face_box": [
+          157,
+          213,
+          103,
+          151
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.30.27 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.27 (1).jpeg",
+        "sha256": "2ff72ee416f1fbac0b41a6015b75215bc6396fcd7667fe3d6f14284536660658",
+        "confidence": 0.8218012452125549,
+        "face_box": [
+          218,
+          480,
+          455,
+          490
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.21.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.21.jpeg",
+        "sha256": "30317fcd384820b21cdffc8cd80863647b2a6a78e093bc7dc0f7624b7c99e6c1",
+        "confidence": 0.9225860238075256,
+        "face_box": [
+          196,
+          122,
+          157,
+          215
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.26 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.26 (1).jpeg",
+        "sha256": "ed8f60a0a2a380e4f281363ee0cbb96c9190354c58a230f8fb03bc37aa56f13a",
+        "confidence": 0.9300885796546936,
+        "face_box": [
+          203,
+          124,
+          62,
+          80
+        ],
+        "identity": "amir",
+        "label": 0
+      },
       {
         "filename": "WhatsApp Image 2026-11-01 at 02.30.28 (1).jpeg",
         "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.28 (1).jpeg",
         "sha256": "45c8c75d3e7304ee7d8baf37b40634d5e78dd4b0a0228495d8f0ae519a0f49a8",
-        "readable": true,
-        "face_detected": true,
         "confidence": 0.8795902132987976,
         "face_box": [
           496,
@@ -978,43 +2972,851 @@
         "label": 0
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.36 (3).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.36 (3).jpeg",
-        "sha256": "3f2dddab76c715091de2cb6807f852863864ccfcb9cec905045c084fa20cfce2",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8453677296638489,
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.24.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.24.jpeg",
+        "sha256": "b0fdeaba1956c3c5cb4aee4138e5421a591d1120f8f49c69160241e568fcd18a",
+        "confidence": 0.927205502986908,
         "face_box": [
-          291,
-          392,
-          89,
-          122
+          259,
+          52,
+          96,
+          130
         ],
-        "identity": "saif",
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.32.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.32.jpeg",
+        "sha256": "0e26000cc215faba26a55149971c5527745882e1d2bc559008df6bddfd5c4b76",
+        "confidence": 0.9422890543937683,
+        "face_box": [
+          279,
+          66,
+          61,
+          83
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.28.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.28.jpeg",
+        "sha256": "3d5693e49aeba78c4b80f2b7e797963c2e2102fc899194c86c213e2f3dafddd8",
+        "confidence": 0.9282774925231934,
+        "face_box": [
+          208,
+          102,
+          93,
+          120
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.56.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.56.jpeg",
+        "sha256": "aa2889282185b59937e04f89edf1f2d6d172a8bfe1f5cbb58d8036798e0cb589",
+        "confidence": 0.9182566404342651,
+        "face_box": [
+          168,
+          77,
+          83,
+          117
+        ],
+        "identity": "ranbir",
         "label": 1
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.23 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.23 (1).jpeg",
-        "sha256": "a52b95a778a77dd63b1cec64988acd763f68ee34e9228247e1708541b9ca2c96",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9161915183067322,
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.52.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.52.jpeg",
+        "sha256": "554cb23e29c0ee44a0941939e8fa538cf6785302cdcbdb73e96fcc26174c103c",
+        "confidence": 0.9336758852005005,
         "face_box": [
-          215,
-          193,
-          59,
-          75
+          126,
+          111,
+          167,
+          226
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.55 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.55 (1).jpeg",
+        "sha256": "1e15a00f570c270a27f1eb0368f756f8d837e1713e7c84c28b5c1ffa106b35e4",
+        "confidence": 0.9352294206619263,
+        "face_box": [
+          98,
+          60,
+          217,
+          361
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.43 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.43 (1).jpeg",
+        "sha256": "21b267d1d88b6d193bb4e6dd0e39ea63b920f28221d1457d0b476624efbf911a",
+        "confidence": 0.9311148524284363,
+        "face_box": [
+          167,
+          69,
+          60,
+          78
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.00 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.00 (2).jpeg",
+        "sha256": "5c93d6733a9f7f30dbe44d84cea01dc654a6d4050be0d8dc176311c9d152ab73",
+        "confidence": 0.8900904059410095,
+        "face_box": [
+          160,
+          145,
+          85,
+          103
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.54.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.54.jpeg",
+        "sha256": "89355983bb50ff31c83ab00c565a80f84304d70134fe16f5a8bcb634e5d5440a",
+        "confidence": 0.9386998414993286,
+        "face_box": [
+          152,
+          72,
+          96,
+          133
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.57 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.57 (2).jpeg",
+        "sha256": "c372d18abc50b724374640e66ddd1641449ff819cf05974af504781064c15240",
+        "confidence": 0.9287147521972656,
+        "face_box": [
+          80,
+          90,
+          179,
+          239
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.02 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.02 (1).jpeg",
+        "sha256": "8023d8d133d72f07a1ef9d20eb7b8860af9741b2e9ab0194485eb5a748a76bf4",
+        "confidence": 0.9469350576400757,
+        "face_box": [
+          168,
+          57,
+          66,
+          89
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.45 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.45 (1).jpeg",
+        "sha256": "e0a89b112d0f0fd8cb253f4e4808efd33b483ac97a6742907a146c440eecc515",
+        "confidence": 0.9278824925422668,
+        "face_box": [
+          165,
+          34,
+          67,
+          94
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.20.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.20.jpeg",
+        "sha256": "b18903b9880bc735b7baa74914bf5083dad02e490ed564eb271626964519484f",
+        "confidence": 0.8836976289749146,
+        "face_box": [
+          222,
+          280,
+          103,
+          173
         ],
         "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.36 (2).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.36 (2).jpeg",
+        "sha256": "cae45d138361bcf9b9c900c5c1885f0732847f008eef51d3df0b30d70204abde",
+        "confidence": 0.9024366736412048,
+        "face_box": [
+          357,
+          407,
+          45,
+          55
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.39.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.39.jpeg",
+        "sha256": "746dc2af317ca41ae6b49a064d33a7349d073a36dfa036313d46b4cba5223396",
+        "confidence": 0.9015125036239624,
+        "face_box": [
+          406,
+          496,
+          95,
+          153
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.38 (2).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.38 (2).jpeg",
+        "sha256": "8b029916c2f5e4bc8d405876add53457049741a6bdbf8b64e4e35080af21f0c9",
+        "confidence": 0.9293721914291382,
+        "face_box": [
+          325,
+          182,
+          98,
+          143
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.21 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.21 (1).jpeg",
+        "sha256": "c9e0b988b5c65b8dee020ead4864be0fe8c49b290e17d7a9bf1b5b0c906fd8c3",
+        "confidence": 0.9101884961128235,
+        "face_box": [
+          265,
+          417,
+          43,
+          53
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.28.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.28.jpeg",
+        "sha256": "9039612232e51ae5447c6a26de54f1681297910ce9b85cafbe24c995cae367f1",
+        "confidence": 0.8741036653518677,
+        "face_box": [
+          317,
+          157,
+          59,
+          84
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.26.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.26.jpeg",
+        "sha256": "8146078ae67f6e55da8a0234fbc6fdce98bc679a3ecd727c6d8d51930390663a",
+        "confidence": 0.8992828130722046,
+        "face_box": [
+          270,
+          356,
+          95,
+          126
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.44 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.44 (1).jpeg",
+        "sha256": "a2a31792fabd13cd3c86a1cd262a8a50a5d14c2c4dd65bd003f6206b39ffd64a",
+        "confidence": 0.9398062229156494,
+        "face_box": [
+          144,
+          74,
+          77,
+          105
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.20.59.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.20.59.jpeg",
+        "sha256": "2c5055bb551313db29eeb6f62fb02752221057cf16194ba6b9ef512c92535d1f",
+        "confidence": 0.8383293747901917,
+        "face_box": [
+          689,
+          320,
+          447,
+          562
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.44.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.44.jpeg",
+        "sha256": "aaa6f4fee65e07f92bf70191e13a38b43bc36680fe6b3e4fae0c851bec8c6c89",
+        "confidence": 0.9245572090148926,
+        "face_box": [
+          176,
+          79,
+          87,
+          123
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.49.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.49.jpeg",
+        "sha256": "80590a04c542dbf4747b697e799253c94fc7393f8ec36662144a9f7c3d35f658",
+        "confidence": 0.9385378956794739,
+        "face_box": [
+          229,
+          18,
+          172,
+          241
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.47 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.47 (2).jpeg",
+        "sha256": "8e240a7843683ae26bc72c65bc9085e84638cb6da8a9b24be4b5a949cc428c0b",
+        "confidence": 0.9328722953796387,
+        "face_box": [
+          210,
+          98,
+          96,
+          128
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.35 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.35 (1).jpeg",
+        "sha256": "b2d893cb7c8f0560c5a7ca42b03600defa707ecaa68fb3331ff0cdfcb04c88f2",
+        "confidence": 0.9250032901763916,
+        "face_box": [
+          119,
+          163,
+          33,
+          43
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.30 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.30 (1).jpeg",
+        "sha256": "b0371b880409fe99a0df9cf58255e2d6a24f53bcfc0f676ce4bf6ab79976f1d6",
+        "confidence": 0.934960663318634,
+        "face_box": [
+          246,
+          72,
+          128,
+          188
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.20.59 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.20.59 (1).jpeg",
+        "sha256": "460780b0a711df465b6e30993bde0bc4aae34a6f4379758d695b39ee6d9bbdf5",
+        "confidence": 0.8949794769287109,
+        "face_box": [
+          457,
+          440,
+          369,
+          454
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.40.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.40.jpeg",
+        "sha256": "676b4e4ba7e9543f813ac679006bce760ca7536f2f1776c6d6abc62bbb00611e",
+        "confidence": 0.936297595500946,
+        "face_box": [
+          183,
+          110,
+          36,
+          48
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.28.16 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.16 (2).jpeg",
+        "sha256": "a40592c8386eb456ed9c18b1bf1c11c96b7fa0414822fe6378b0094a6241c23e",
+        "confidence": 0.8494634628295898,
+        "face_box": [
+          495,
+          216,
+          343,
+          427
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.58 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.58 (1).jpeg",
+        "sha256": "d9967fc7c81d387a859ebdbb91dca67c4bf32ef987b21f56e16f26591264b5a8",
+        "confidence": 0.9273152947425842,
+        "face_box": [
+          175,
+          54,
+          48,
+          57
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.46 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.46 (1).jpeg",
+        "sha256": "7966c09a158cd358dcdb80bdfecc6c636badb68f9db5e5d29a7e13c5e0df3a81",
+        "confidence": 0.9320415258407593,
+        "face_box": [
+          292,
+          151,
+          60,
+          83
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.38.00.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.38.00.jpeg",
+        "sha256": "ae15479e1adf05b99bcf9b98bcaebd5c18e079dc23215ff5f70c1476851e69b5",
+        "confidence": 0.9351035356521606,
+        "face_box": [
+          223,
+          72,
+          119,
+          155
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.28.15.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.15.jpeg",
+        "sha256": "c8fe9196f347a0a387ccc622a1e68bf2fb148ece10f2a64ad47d5065880fdadd",
+        "confidence": 0.9544985294342041,
+        "face_box": [
+          430,
+          228,
+          210,
+          273
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.38.01.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.38.01.jpeg",
+        "sha256": "dd81f278d4c3b4c4c6fc1bfa2ade982852fa5a484ff18bd48963d3aa7e056a34",
+        "confidence": 0.9370036125183105,
+        "face_box": [
+          202,
+          89,
+          64,
+          84
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.51 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.51 (2).jpeg",
+        "sha256": "c8d4adfe650301fa6a034aef5025f8eac701edaa63d4719469028aa31bc53940",
+        "confidence": 0.9337362051010132,
+        "face_box": [
+          245,
+          103,
+          63,
+          80
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.59 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.59 (1).jpeg",
+        "sha256": "3c7925ef40bfdd88af2acb3229272b19ea5bd42e6e14442df4d78630863dd2e5",
+        "confidence": 0.9278644919395447,
+        "face_box": [
+          133,
+          37,
+          47,
+          62
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.42 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.42 (1).jpeg",
+        "sha256": "f031af732d9f956969f0d3373af10e09f9c6905b95dc875400d2c32500a8b93d",
+        "confidence": 0.9113067388534546,
+        "face_box": [
+          334,
+          149,
+          52,
+          66
+        ],
+        "identity": "sharuk",
+        "label": 4
+      }
+    ],
+    "test": [
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.30.28.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.28.jpeg",
+        "sha256": "c77f8b6bd65f1a082c2cecd3d7b3c1b6536a89e6508ceaaa54eb83d2198045d0",
+        "confidence": 0.8232101202011108,
+        "face_box": [
+          379,
+          275,
+          339,
+          436
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.34.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.34.jpeg",
+        "sha256": "349c7b76fecf8baa33dbddc34bf273b9679dbc5c0898b5b83f3cac8222a533b4",
+        "confidence": 0.9359474182128906,
+        "face_box": [
+          122,
+          75,
+          64,
+          88
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.11.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.11.jpeg",
+        "sha256": "717c3b54c8e6746aacf25bb04cff4fb2a9d2cb0615f0bd045b6307ea861f8368",
+        "confidence": 0.9256300926208496,
+        "face_box": [
+          125,
+          103,
+          158,
+          233
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.15.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.15.jpeg",
+        "sha256": "41b5de36baeb32c8802d5284a67c40c3699be4ad03ab920d3f6d4f1f7316e595",
+        "confidence": 0.9260377287864685,
+        "face_box": [
+          267,
+          63,
+          62,
+          85
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.16 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.16 (1).jpeg",
+        "sha256": "9dd06d96324721e798b86b6c22f37a400b94fd6a3e6da69c110ed06ba396f492",
+        "confidence": 0.9258641004562378,
+        "face_box": [
+          143,
+          49,
+          50,
+          67
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.17 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.17 (1).jpeg",
+        "sha256": "88c6793ed15e620e32ed40dbd4c4328bf78db491d87214098400dd1a494b64fb",
+        "confidence": 0.9301750659942627,
+        "face_box": [
+          159,
+          58,
+          78,
+          106
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.30 (1).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.30 (1).jpeg",
+        "sha256": "30c2a285308f21b3ff65e3817a6daa7fbb2e8320d0e05055ad1b5661967c59d7",
+        "confidence": 0.9286683797836304,
+        "face_box": [
+          172,
+          154,
+          65,
+          86
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.30.26.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 02.30.26.jpeg",
+        "sha256": "c2171c4a6e4bfc069dbc3b12f17a6c7cfeb15ab3b7d77f4e06f8c1214da48c13",
+        "confidence": 0.9154982566833496,
+        "face_box": [
+          447,
+          214,
+          335,
+          515
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.10.jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.10.jpeg",
+        "sha256": "7e7e0ddc047a5a4b3d615129735c44d62308703f5c6bb4b5626951b6d86ac9ba",
+        "confidence": 0.9382198452949524,
+        "face_box": [
+          114,
+          119,
+          178,
+          263
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.42.27 (2).jpeg",
+        "path": "dataset/amir/WhatsApp Image 2026-11-01 at 16.42.27 (2).jpeg",
+        "sha256": "96b8904278ab1dccc7fec6a13c2257a0f133785a4db7160385d3f45cfdbfe683",
+        "confidence": 0.9352431297302246,
+        "face_box": [
+          232,
+          105,
+          123,
+          170
+        ],
+        "identity": "amir",
+        "label": 0
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.03 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.03 (2).jpeg",
+        "sha256": "11eae4b2f73bf88c76ff60716e786754bbb283c03acd343faa684880922e3e5d",
+        "confidence": 0.9153485894203186,
+        "face_box": [
+          194,
+          66,
+          98,
+          127
+        ],
+        "identity": "ranbir",
         "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.58.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.58.jpeg",
+        "sha256": "fab950c9148eeef97af13ab65e577330a88bf9e2cf986daa2b4b4b333d83d942",
+        "confidence": 0.9147688150405884,
+        "face_box": [
+          219,
+          79,
+          65,
+          92
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.51 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.51 (1).jpeg",
+        "sha256": "8f6dc308ebfdb63e92b158fc0934f8a18982a8371c2ecd63c9700e0fe1b9e236",
+        "confidence": 0.9224329590797424,
+        "face_box": [
+          145,
+          38,
+          51,
+          70
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.53.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.53.jpeg",
+        "sha256": "3f36a29fd3ffb89210ca73155088829806ef13e9161dd92e968907966816ebde",
+        "confidence": 0.9348421692848206,
+        "face_box": [
+          284,
+          73,
+          154,
+          230
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.46 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.46 (1).jpeg",
+        "sha256": "588f13388bb8e2af87f0dcaabe8d1da43edae6e8b3cd48b3de14c4162cdfafc9",
+        "confidence": 0.9107398986816406,
+        "face_box": [
+          241,
+          70,
+          128,
+          167
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.47.00.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.47.00.jpeg",
+        "sha256": "db4144ce8650c52e10e608bc854baed3514502903fb35bddbeb90d7068447835",
+        "confidence": 0.931723952293396,
+        "face_box": [
+          179,
+          61,
+          51,
+          70
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.59 (2).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.59 (2).jpeg",
+        "sha256": "c865b59ac2838adc4fb084c2410bc3216b373b2aa8be12d97619086253bdc09b",
+        "confidence": 0.9304547905921936,
+        "face_box": [
+          159,
+          51,
+          45,
+          61
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.49 (1).jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.49 (1).jpeg",
+        "sha256": "1a66f55b644dd45fecc46d20fbfb583643ba0b9e23a73b83ede72d28cbfe1502",
+        "confidence": 0.9209364652633667,
+        "face_box": [
+          136,
+          40,
+          47,
+          69
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.46.43.jpeg",
+        "path": "dataset/ranbir/WhatsApp Image 2026-11-01 at 16.46.43.jpeg",
+        "sha256": "41b19d20da3220e3a650b10c302cfcfb31ad184522eb7f95823b8fbccf9a4aa9",
+        "confidence": 0.9091001152992249,
+        "face_box": [
+          482,
+          164,
+          62,
+          84
+        ],
+        "identity": "ranbir",
+        "label": 1
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.31 (2).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.31 (2).jpeg",
+        "sha256": "cef0c10bd52cbdd9c44ffdae07e449aeaad0c6ce27fd93030ec2417b408b9590",
+        "confidence": 0.8786082863807678,
+        "face_box": [
+          452,
+          315,
+          46,
+          67
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.25.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.25.jpeg",
+        "sha256": "90c344a3d2809de261c940d1076c7f84f4d066fd98abcff4e4fe93d11ef2b1eb",
+        "confidence": 0.9195520281791687,
+        "face_box": [
+          284,
+          288,
+          52,
+          65
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.24 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.24 (1).jpeg",
+        "sha256": "3bd74b98c25fff34d6a2c54df92ac4e99aeb4d6b24683d2f4d742895b1fed0f2",
+        "confidence": 0.9108797907829285,
+        "face_box": [
+          291,
+          417,
+          48,
+          60
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.39 (2).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.39 (2).jpeg",
+        "sha256": "0bc2b1325f8c212fe371579ec7fe51de1d7334ac7c11942cd8f2a1e480290615",
+        "confidence": 0.8954743146896362,
+        "face_box": [
+          397,
+          355,
+          42,
+          53
+        ],
+        "identity": "saif",
+        "label": 2
       },
       {
         "filename": "WhatsApp Image 2026-11-01 at 01.53.35.jpeg",
         "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.35.jpeg",
         "sha256": "5c547b9db88f3822f93e22ff6189955775fca246f395f4d9dba44c25a2f562b3",
-        "readable": true,
-        "face_detected": true,
         "confidence": 0.9440487623214722,
         "face_box": [
           40,
@@ -1023,129 +3825,296 @@
           216
         ],
         "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.39 (1).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.39 (1).jpeg",
-        "sha256": "53807175c428ab2137c82d821c3327c116015a9973a054b7ebe2d8554f559b9e",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.8441664576530457,
-        "face_box": [
-          302,
-          564,
-          71,
-          109
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.23.jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.23.jpeg",
-        "sha256": "95b9b8623406691ccdd56a2ef087e5967137cd74af717c6d5d8bc74007771663",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9131614565849304,
-        "face_box": [
-          369,
-          417,
-          39,
-          48
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.40 (2).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.40 (2).jpeg",
-        "sha256": "f00f6ba3a3210cb83d70e1ed0f11851315d9dc3cf3974103ae04afde2fab5b85",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9255805611610413,
-        "face_box": [
-          333,
-          432,
-          208,
-          252
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 01.53.24 (2).jpeg",
-        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.24 (2).jpeg",
-        "sha256": "584470f1c7ee8adc704932421056039268898df243622b2e0be53dd8cbcf58c6",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9187920689582825,
-        "face_box": [
-          277,
-          392,
-          49,
-          61
-        ],
-        "identity": "saif",
-        "label": 1
-      },
-      {
-        "filename": "WhatsApp Image 2026-11-01 at 02.21.01.jpeg",
-        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.21.01.jpeg",
-        "sha256": "f48567f080155f49b772a05f3117a21ad94a2b82f1d10673e4f4ba06606fdaf4",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9428704977035522,
-        "face_box": [
-          508,
-          74,
-          184,
-          282
-        ],
-        "identity": "salman",
         "label": 2
       },
       {
-        "filename": "WhatsApp Image 2026-11-01 at 02.28.17.jpeg",
-        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.17.jpeg",
-        "sha256": "57204296e518472e22d00dd672ba7f46d64408533e76bc2685667588afd0a0d6",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9391353130340576,
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.35 (1).jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.35 (1).jpeg",
+        "sha256": "706c19de77a3c321fea42d12f0afc58fa4b20c6f9a95c34d880bc6d29635ef9b",
+        "confidence": 0.8945101499557495,
         "face_box": [
-          357,
-          262,
-          131,
-          163
+          316,
+          458,
+          63,
+          77
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 01.53.32.jpeg",
+        "path": "dataset/saif/WhatsApp Image 2026-11-01 at 01.53.32.jpeg",
+        "sha256": "51e39028b9d2fa2ff316580bbc740d92ea6280b38db89d638a6ff8a3a28a7a41",
+        "confidence": 0.9171764254570007,
+        "face_box": [
+          359,
+          320,
+          51,
+          58
+        ],
+        "identity": "saif",
+        "label": 2
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.21.00 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.21.00 (2).jpeg",
+        "sha256": "3d7519fd3bc0dc537fb3f96a05b449938be3d2276c5b904a95344618f22878ac",
+        "confidence": 0.8879508376121521,
+        "face_box": [
+          318,
+          42,
+          261,
+          376
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.20.59 (2).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.20.59 (2).jpeg",
+        "sha256": "77b4883d910bc40a42c859052949eb5bf8abe79f171d76d557874ffa47b8fa19",
+        "confidence": 0.9115252494812012,
+        "face_box": [
+          664,
+          159,
+          179,
+          242
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.37 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.37 (1).jpeg",
+        "sha256": "643643e46b726f18f15f4dd31a5911e00a45d2d1cb8643d5f321156ef40a4175",
+        "confidence": 0.9264290928840637,
+        "face_box": [
+          279,
+          150,
+          30,
+          38
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.35.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.35.jpeg",
+        "sha256": "d5d46e58fe991e29c5d1f87a965458ccd1fa71f2fe6a31ae4a8af739333be929",
+        "confidence": 0.9224197864532471,
+        "face_box": [
+          160,
+          55,
+          46,
+          64
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.21.00.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 02.21.00.jpeg",
+        "sha256": "6d91d4aac5240782544bab4b72e47de08ad13d07c80315cb3583c5ed05c2c4d5",
+        "confidence": 0.9323904514312744,
+        "face_box": [
+          465,
+          99,
+          171,
+          232
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.34 (3).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.34 (3).jpeg",
+        "sha256": "873a7773861fe0068823be4358bf7b076d37429175c564968faaf0ca3a2e8304",
+        "confidence": 0.9152287244796753,
+        "face_box": [
+          198,
+          126,
+          57,
+          76
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.41 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.41 (1).jpeg",
+        "sha256": "089d204be1edfd6af83e5d302993c8561e958e784a7afaf8987bfc0b154423ed",
+        "confidence": 0.9184765219688416,
+        "face_box": [
+          196,
+          44,
+          45,
+          64
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.39 (1).jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.39 (1).jpeg",
+        "sha256": "e17c5b6e428634cca8146a0ba5f3589ec1a2d9b6087e2f28c2e0da2b86996462",
+        "confidence": 0.9073398113250732,
+        "face_box": [
+          193,
+          115,
+          41,
+          56
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.33.34.jpeg",
+        "path": "dataset/salman/WhatsApp Image 2026-11-01 at 16.33.34.jpeg",
+        "sha256": "f09bb49f176926406655f2fba6ca3530aa058c24d60bfd4934f67bc88abec2e7",
+        "confidence": 0.9162683486938477,
+        "face_box": [
+          159,
+          57,
+          48,
+          66
+        ],
+        "identity": "salman",
+        "label": 3
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.51 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.51 (1).jpeg",
+        "sha256": "8db58d84d88117211cd3b583206accdb8d6b9503c095a8c0feae1acbadef1a2c",
+        "confidence": 0.9307324290275574,
+        "face_box": [
+          399,
+          61,
+          48,
+          61
         ],
         "identity": "sharuk",
-        "label": 3
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.53.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.53.jpeg",
+        "sha256": "8dc594a764b9b0049afaff0fe2a4b3d4ffc7c61e8f751d2fb5338e1c9bf22dc6",
+        "confidence": 0.9007189273834229,
+        "face_box": [
+          267,
+          74,
+          58,
+          71
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.44 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.44 (1).jpeg",
+        "sha256": "459ac13e3b39678f7aa36dc159abe41acfef6800b3e1c408a8efcc591d9930e0",
+        "confidence": 0.9383167028427124,
+        "face_box": [
+          272,
+          64,
+          109,
+          153
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.59 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.59 (2).jpeg",
+        "sha256": "3b24ced650b8c3338a600380bf436e26eb266c9bb363510fef321ec938a085f8",
+        "confidence": 0.9268522262573242,
+        "face_box": [
+          233,
+          99,
+          94,
+          112
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.52.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.52.jpeg",
+        "sha256": "6c5b0360a21617dbea79739ba1b720ef40f77179bdbce83ff86c91ab35debcbe",
+        "confidence": 0.943518340587616,
+        "face_box": [
+          189,
+          91,
+          75,
+          103
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.28.16 (1).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.16 (1).jpeg",
+        "sha256": "03df62b01267c2b91f48f8d252436272fe692560c868563371674179985ffb06",
+        "confidence": 0.9417870044708252,
+        "face_box": [
+          550,
+          310,
+          188,
+          252
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.48 (2).jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.48 (2).jpeg",
+        "sha256": "e1a80926366761adf95417f0e9e29a1baff35768fb90e15416297e7ef765e247",
+        "confidence": 0.9226743578910828,
+        "face_box": [
+          287,
+          150,
+          174,
+          231
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 02.28.16.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 02.28.16.jpeg",
+        "sha256": "5550d5641d7500acacd1240f56fbb0a5ac402f35d4116cf2de37e0a1f18077de",
+        "confidence": 0.951045036315918,
+        "face_box": [
+          441,
+          226,
+          220,
+          305
+        ],
+        "identity": "sharuk",
+        "label": 4
+      },
+      {
+        "filename": "WhatsApp Image 2026-11-01 at 16.37.59.jpeg",
+        "path": "dataset/sharuk/WhatsApp Image 2026-11-01 at 16.37.59.jpeg",
+        "sha256": "41372e29769f536956aaecc75030df17c0d3eda973e1047441a6ae8fcb8ec53c",
+        "confidence": 0.9429068565368652,
+        "face_box": [
+          207,
+          90,
+          75,
+          94
+        ],
+        "identity": "sharuk",
+        "label": 4
       }
     ],
-    "unknown_probe": [
-      {
-        "filename": "person.jpg",
-        "path": "dataset/adnan/person.jpg",
-        "sha256": "58e4c5ccae15ced6c86f4c965e38055fabe2eb66b286983ee1e633db6c344960",
-        "readable": true,
-        "face_detected": true,
-        "confidence": 0.9424432516098022,
-        "face_box": [
-          429,
-          262,
-          193,
-          263
-        ],
-        "identity": "adnan",
-        "label": -1
-      }
-    ]
+    "unknown_probe": []
   },
   "summary": {
-    "train_count": 49,
-    "val_count": 10,
-    "test_count": 10,
-    "unknown_count": 1,
+    "total_images": 292,
+    "train_count": 205,
+    "val_count": 43,
+    "test_count": 44,
     "zero_leakage_verified": true
   }
 }

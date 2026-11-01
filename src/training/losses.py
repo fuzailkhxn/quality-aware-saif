@@ -94,6 +94,7 @@ class AdaptiveMarginLoss(tf.keras.losses.Loss):
         noise_weight_floor: float = 0.1,
         quality_alpha: float = 0.6,
         confidence_alpha: float = 0.4,
+        use_quality_weighting: bool = True,
         **kwargs,
     ) -> None:
         super().__init__(**kwargs)
@@ -107,6 +108,7 @@ class AdaptiveMarginLoss(tf.keras.losses.Loss):
         self.noise_weight_floor = noise_weight_floor
         self.quality_alpha = quality_alpha
         self.confidence_alpha = confidence_alpha
+        self.use_quality_weighting = use_quality_weighting
 
         # Learnable weight matrix W: shape (embedding_dim, num_classes)
         # Each column is the class weight vector (analogous to a prototype in
@@ -228,6 +230,9 @@ class AdaptiveMarginLoss(tf.keras.losses.Loss):
         )                                                           # (B,)
 
         # 8. Quality-based sample weighting (Objective D)
+        if not self.use_quality_weighting:
+            return tf.reduce_mean(per_sample_loss)
+
         if quality_scores is None:
             quality_scores = tf.ones(tf.shape(per_sample_loss), dtype=tf.float32)
         else:

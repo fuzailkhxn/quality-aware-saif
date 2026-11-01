@@ -80,6 +80,7 @@ def create_embedding_model(
     backbone_trainable: bool = False,
     fine_tune_from_layer: int = -30,
     dropout_rate: float = 0.3,
+    l2_reg: float = 0.0,
 ) -> Model:
     """
     Create an embedding model that maps face images to a 512-d (or
@@ -91,7 +92,7 @@ def create_embedding_model(
         -> GlobalAveragePooling2D
         -> BatchNormalization
         -> Dropout(dropout_rate)
-        -> Dense(embedding_dim, linear activation)   # raw embedding
+        -> Dense(embedding_dim, linear activation, l2_reg)   # raw embedding
         -> BatchNormalization                         # stabilise scale
         -> L2-normalise (Lambda layer)               # unit-length vector
 
@@ -113,6 +114,8 @@ def create_embedding_model(
         Ignored when backbone_trainable is False.
     dropout_rate : float
         Dropout probability applied after the global pooling layer.
+    l2_reg : float
+        L2 weight decay penalty on the embedding dense layer.
 
     Returns
     -------
@@ -141,8 +144,10 @@ def create_embedding_model(
     x = Dropout(dropout_rate, name="dropout")(x)
 
     # Linear projection to embedding dimension
+    regularizer = tf.keras.regularizers.l2(l2_reg) if l2_reg > 0 else None
     x = Dense(embedding_dim, activation=None, use_bias=False,
-               name="embedding_dense")(x)
+              kernel_regularizer=regularizer,
+              name="embedding_dense")(x)
 
     # Batch-normalise for training stability
     x = BatchNormalization(name="bn_embedding")(x)
@@ -161,6 +166,31 @@ def create_embedding_model(
     )
 
     return model
+
+
+def unfreeze_upper_backbone(model: Model, fine_tune_from_layer: int = -20) -> int:
+    """
+    Unfreezes the upper backbone layers in-place for Stage 2 fine-tuning.
+
+    Parameters
+    ----------
+    model : Model
+        The embedding model created by create_embedding_model.
+    fine_tune_from_layer : int
+        Number of upper backbone layers to unfreeze (negative index, e.g. -20).
+
+    Returns
+    -------
+    int
+        Total number of trainable layers after unfreezing.
+    """
+    head_names = {"gap", "bn_gap", "dropout", "embedding_dense", "bn_embedding", "l2_normalize"}
+    backbone_layers = [l for l in model.layers if l.name not in head_names]
+    cutoff = len(backbone_layers) + fine_tune_from_layer if fine_tune_from_layer < 0 else fine_tune_from_layer
+    for i, layer in enumerate(backbone_layers):
+        layer.trainable = (i >= cutoff)
+    trainable_count = sum(1 for l in model.layers if l.trainable)
+    return trainable_count
 
 
 def get_backbone_layer_names(embedding_dim: int = 512) -> list:

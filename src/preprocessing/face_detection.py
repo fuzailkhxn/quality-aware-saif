@@ -153,7 +153,7 @@ class FaceDetector:
 def crop_face(
     image: np.ndarray,
     box: Tuple[int, int, int, int],
-    padding: float = 0.1,
+    padding: float = 0.12,
 ) -> np.ndarray:
     """
     Crop face with proportional boundary padding.

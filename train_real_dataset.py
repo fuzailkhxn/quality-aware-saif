@@ -1,12 +1,13 @@
 """
 train_real_dataset.py
 ======================
-Executes real CPU training on the 4-identity dataset using:
+Executes real CPU training on the 5-identity dataset using:
 - Real face images from dataset/split_manifest.json (ZERO synthetic data)
-- MobileNetV2 512-d embedding model (CPU-optimized, backbone frozen)
+- 5 identities: amir, ranbir, saif, salman, sharuk (292 total usable images)
+- MobileNetV2 512-d embedding model (CPU-optimized, backbone frozen, trainable head)
 - Prototype-aware Adaptive Margin Loss
 - Quality-weighted Prototype Memory EMA updates
-- Comprehensive evaluation on held-out test images (Accuracy, F1, Confusion Matrix, ROC/AUC, Unknown Probe)
+- Comprehensive evaluation on 44 held-out test images (Accuracy, Precision, Recall, F1, Confusion Matrix, Verification Metrics, ROC/AUC)
 - Weight update and reload verification
 """
 
@@ -43,7 +44,7 @@ LOG_CSV = os.path.join(LOG_DIR, "real_training_log.csv")
 
 def main():
     print("=" * 65)
-    print("  QUALITY-AWARE FACE RECOGNITION — REAL DATASET CPU TRAINING")
+    print("  QUALITY-AWARE FACE RECOGNITION — 5-IDENTITY REAL CPU TRAINING")
     print("=" * 65)
 
     os.makedirs("checkpoints", exist_ok=True)
@@ -55,26 +56,30 @@ def main():
     print(f"\n[1/7] Loading dataset splits from {MANIFEST_PATH}...")
     train_dict, val_dict, test_dict, unknown_dict, classes = load_split_from_manifest(MANIFEST_PATH)
     num_classes = len(classes)
-    print(f"  Classes ({num_classes}): {classes}")
-    print(f"  Train samples: {sum(len(v) for v in train_dict.values())}")
-    print(f"  Val samples:   {sum(len(v) for v in val_dict.values())} (Exploratory small set)")
-    print(f"  Test samples:  {sum(len(v) for v in test_dict.values())} (Held-out evaluation set)")
-    print(f"  Unknown probe: {sum(len(v) for v in unknown_dict.values())} (Adnan single-sample probe)")
+    train_count = sum(len(v) for v in train_dict.values())
+    val_count = sum(len(v) for v in val_dict.values())
+    test_count = sum(len(v) for v in test_dict.values())
+    unknown_count = sum(len(v) for v in unknown_dict.values())
+
+    print(f"  Identities ({num_classes}): {classes}")
+    print(f"  Train samples: {train_count}")
+    print(f"  Val samples:   {val_count} (Held-out validation set)")
+    print(f"  Test samples:  {test_count} (Held-out evaluation set)")
+    print(f"  Total samples: {train_count + val_count + test_count}")
 
     # 2. Build TF Datasets
     print("\n[2/7] Constructing tf.data pipelines...")
-    batch_size = 7  # 49 train images / 7 = 7 batches per epoch
+    batch_size = 8  # 205 train images / 8 = ~25 batches per epoch (CPU friendly)
     train_ds, _, _ = build_tf_dataset_from_dict(
         train_dict, image_size=(224, 224), batch_size=batch_size, augment=True, is_training=True, seed=42
     )
     val_ds, _, _ = build_tf_dataset_from_dict(
-        val_dict, image_size=(224, 224), batch_size=len(val_dict), augment=False, is_training=False, seed=42
+        val_dict, image_size=(224, 224), batch_size=batch_size, augment=False, is_training=False, seed=42
     )
 
     # 3. Instantiate Architecture & Prototype Memory
     print("\n[3/7] Instantiating MobileNetV2 512-d Model and Prototype Memory...")
     embedding_dim = 512
-    # Backbone frozen for fast CPU execution; head and BN are trainable
     model = create_embedding_model(
         embedding_dim=embedding_dim,
         backbone_trainable=False,
@@ -108,7 +113,7 @@ def main():
         num_classes=num_classes,
         learning_rate=3e-4,
         results_dir="results",
-        prototype_init_batches=2,
+        prototype_init_batches=20,  # Covers full train set to initialize all 5 class prototypes
     )
     # Redirect log path
     trainer._log_path = LOG_CSV
@@ -165,15 +170,19 @@ def main():
     print("  [CONFIRMED] Saved prototypes are non-empty, normalized, and dimension-consistent.")
 
     # 7. Evaluate on Held-out Test Images
-    print("\n[6/7] Evaluating on Held-out Test Images (10 samples)...")
+    print(f"\n[6/7] Evaluating on Held-out Test Images ({test_count} samples)...")
     test_images = []
     test_labels = []
     test_paths = []
     test_identities = []
 
-    for item in test_dict.values():
-        for p in item:
+    for c in classes:
+        paths = test_dict.get(c, [])
+        c_idx = classes.index(c)
+        for p in paths:
             test_paths.append(p)
+            test_labels.append(c_idx)
+            test_identities.append(c)
 
     # Read and preprocess test images
     for p in test_paths:
@@ -182,18 +191,12 @@ def main():
         img = tf.image.resize(img, (224, 224))
         img = tf.cast(img, tf.float32) / 255.0
         test_images.append(img)
-        # Find identity label
-        for idx, c in enumerate(classes):
-            if f"/{c}/" in p or f"\\{c}\\" in p:
-                test_labels.append(idx)
-                test_identities.append(c)
-                break
 
     test_tensor = tf.stack(test_images, axis=0)
-    test_embeddings = eval_model(test_tensor, training=False).numpy()  # (10, 512)
+    test_embeddings = eval_model(test_tensor, training=False).numpy()  # (44, 512)
 
     # Classify against learned prototypes
-    sim_to_protos = test_embeddings @ saved_protos.T  # (10, 4)
+    sim_to_protos = test_embeddings @ saved_protos.T  # (44, 5)
     pred_labels = np.argmax(sim_to_protos, axis=1)
 
     correct_preds = (pred_labels == np.array(test_labels))
@@ -204,7 +207,13 @@ def main():
     clf_report = classification_report(
         test_labels, pred_labels, target_names=classes, output_dict=True, zero_division=0
     )
-    print(f"  Macro F1-Score: {clf_report['macro avg']['f1-score']:.4f}")
+    macro_precision = float(clf_report['macro avg']['precision'])
+    macro_recall = float(clf_report['macro avg']['recall'])
+    macro_f1 = float(clf_report['macro avg']['f1-score'])
+
+    print(f"  Macro Precision: {macro_precision:.4f}")
+    print(f"  Macro Recall:    {macro_recall:.4f}")
+    print(f"  Macro F1-Score:  {macro_f1:.4f}")
 
     # Confusion Matrix
     cm = confusion_matrix(test_labels, pred_labels, labels=list(range(num_classes)))
@@ -214,7 +223,7 @@ def main():
     # Plot Confusion Matrix
     fig, ax = plt.subplots(figsize=(6, 5))
     im = ax.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
-    ax.set_title("Confusion Matrix — Real Test Dataset", fontsize=12, pad=12)
+    ax.set_title("Confusion Matrix — 5-Identity Real Test Dataset", fontsize=12, pad=12)
     fig.colorbar(im)
     tick_marks = np.arange(num_classes)
     ax.set_xticks(tick_marks)
@@ -246,17 +255,17 @@ def main():
             else:
                 impostor_sims.append(sim)
 
-    print(f"\n  Pairwise Verification Analysis:")
+    print(f"\n  Pairwise Verification Analysis ({n_test * (n_test - 1) // 2} total pairs):")
     print(f"    Genuine pairs:  {len(genuine_sims)} (mean similarity: {np.mean(genuine_sims):.4f})")
     print(f"    Impostor pairs: {len(impostor_sims)} (mean similarity: {np.mean(impostor_sims):.4f})")
 
     # Plot Similarity Distributions
     fig, ax = plt.subplots(figsize=(7, 4.5))
     if len(genuine_sims) > 0:
-        ax.hist(genuine_sims, bins=10, alpha=0.7, label=f"Genuine (N={len(genuine_sims)}, mean={np.mean(genuine_sims):.2f})", color="green")
+        ax.hist(genuine_sims, bins=15, alpha=0.7, label=f"Genuine (N={len(genuine_sims)}, mean={np.mean(genuine_sims):.3f})", color="green")
     if len(impostor_sims) > 0:
-        ax.hist(impostor_sims, bins=15, alpha=0.7, label=f"Impostor (N={len(impostor_sims)}, mean={np.mean(impostor_sims):.2f})", color="red")
-    ax.set_title("Cosine Similarity Distribution (Held-Out Test Images)", fontsize=12)
+        ax.hist(impostor_sims, bins=25, alpha=0.7, label=f"Impostor (N={len(impostor_sims)}, mean={np.mean(impostor_sims):.3f})", color="red")
+    ax.set_title("Cosine Similarity Distribution (44 Held-Out Test Images)", fontsize=12)
     ax.set_xlabel("Cosine Similarity")
     ax.set_ylabel("Pair Count")
     ax.legend(loc="upper left")
@@ -267,7 +276,7 @@ def main():
     plt.close()
     print(f"  Similarity distribution figure saved to {sim_path}")
 
-    # ROC / AUC / EER (Explicitly marked exploratory due to small held-out set)
+    # ROC / AUC / EER
     all_pairs_scores = genuine_sims + impostor_sims
     all_pairs_targets = [1] * len(genuine_sims) + [0] * len(impostor_sims)
     if len(genuine_sims) > 0 and len(impostor_sims) > 0:
@@ -282,7 +291,7 @@ def main():
         ax.plot(fpr, tpr, color='blue', lw=2, label=f'ROC (AUC = {roc_auc:.4f})')
         ax.plot([0, 1], [0, 1], color='gray', linestyle='--')
         ax.scatter([fpr[eer_idx]], [tpr[eer_idx]], color='red', zorder=5, label=f'EER = {eer:.4f} (Thresh={eer_threshold:.2f})')
-        ax.set_title("Exploratory ROC Curve (Test Set N=10)", fontsize=12)
+        ax.set_title(f"ROC Verification Curve (Pairs={len(all_pairs_scores)})", fontsize=12)
         ax.set_xlabel("False Positive Rate (FAR)")
         ax.set_ylabel("True Positive Rate (TAR)")
         ax.legend(loc="lower right")
@@ -291,36 +300,11 @@ def main():
         roc_path = os.path.join(REPORT_DIR, "roc_curve_real.png")
         plt.savefig(roc_path, dpi=200)
         plt.close()
-        print(f"  Exploratory ROC Curve: AUC = {roc_auc:.4f}, EER = {eer:.4f} (Saved to {roc_path})")
+        print(f"  ROC Curve: AUC = {roc_auc:.4f}, EER = {eer:.4f} (Saved to {roc_path})")
     else:
         roc_auc = None
         eer = None
         eer_threshold = None
-
-    # Unknown Person Probe Analysis (Objective E / Open-set)
-    print("\n  Unknown Person Probe Evaluation (`adnan` - 1 image):")
-    unknown_paths = [p for p_list in unknown_dict.values() for p in p_list]
-    unknown_probe_results = []
-    for up in unknown_paths:
-        uimg = tf.io.read_file(up)
-        uimg = tf.io.decode_image(uimg, channels=3, expand_animations=False)
-        uimg = tf.image.resize(uimg, (224, 224))
-        uimg = tf.cast(uimg, tf.float32) / 255.0
-        uemb = eval_model(tf.expand_dims(uimg, 0), training=False).numpy()[0]
-        u_sims = {c: float(np.dot(uemb, saved_protos[idx])) for idx, c in enumerate(classes)}
-        max_sim = max(u_sims.values())
-        assigned_c = max(u_sims, key=u_sims.get)
-        print(f"    Probe image: {up}")
-        print(f"    Similarities to known prototypes: {u_sims}")
-        print(f"    Max similarity: {max_sim:.4f} (Closest to '{assigned_c}')")
-        unknown_probe_results.append({
-            "path": up,
-            "similarities": u_sims,
-            "max_similarity": max_sim,
-            "closest_identity": assigned_c,
-            "rejected_at_0_60_threshold": max_sim < 0.60,
-            "rejected_at_0_70_threshold": max_sim < 0.70
-        })
 
     # Plot Training Loss & Accuracy Curves
     history = train_history
@@ -352,12 +336,12 @@ def main():
         "dataset_summary": {
             "classes": classes,
             "num_classes": num_classes,
-            "train_samples": sum(len(v) for v in train_dict.values()),
-            "val_samples": sum(len(v) for v in val_dict.values()),
-            "test_samples": sum(len(v) for v in test_dict.values()),
-            "unknown_samples": sum(len(v) for v in unknown_dict.values()),
-            "dataset_split_rule": "70% train / 15% val / 15% test identity-balanced, zero-leakage",
-            "adnan_status": "Excluded from 4-class training due to single image; used as unknown probe"
+            "train_samples": train_count,
+            "val_samples": val_count,
+            "test_samples": test_count,
+            "total_images": train_count + val_count + test_count,
+            "dataset_split_rule": "70% train / 15% val / 15% test stratified, zero-leakage",
+            "excluded_identities": "adnan and ranveer excluded due to low sample counts, preserved safely"
         },
         "training_details": {
             "model_architecture": "MobileNetV2 (512-d L2-normalized embedding head)",
@@ -375,23 +359,22 @@ def main():
         "held_out_test_metrics": {
             "sample_count": len(test_labels),
             "accuracy": round(test_accuracy, 4),
-            "macro_precision": round(float(clf_report['macro avg']['precision']), 4),
-            "macro_recall": round(float(clf_report['macro avg']['recall']), 4),
-            "macro_f1": round(float(clf_report['macro avg']['f1-score']), 4),
+            "macro_precision": round(macro_precision, 4),
+            "macro_recall": round(macro_recall, 4),
+            "macro_f1": round(macro_f1, 4),
             "confusion_matrix": cm.tolist(),
-            "per_class_f1": {c: round(float(clf_report[c]['f1-score']), 4) for c in classes}
+            "per_class_metrics": {c: {k: round(float(v), 4) for k, v in clf_report[c].items()} for c in classes}
         },
-        "verification_metrics_exploratory": {
+        "verification_metrics": {
+            "total_pairs": len(all_pairs_scores),
             "genuine_pairs_count": len(genuine_sims),
             "impostor_pairs_count": len(impostor_sims),
             "genuine_mean_sim": round(float(np.mean(genuine_sims)), 4) if genuine_sims else None,
             "impostor_mean_sim": round(float(np.mean(impostor_sims)), 4) if impostor_sims else None,
             "roc_auc": round(roc_auc, 4) if roc_auc is not None else None,
             "eer": round(eer, 4) if eer is not None else None,
-            "eer_threshold": round(eer_threshold, 4) if eer_threshold is not None else None,
-            "note": "Reported as exploratory estimate due to small held-out test size (N=10)"
-        },
-        "unknown_probe_evaluation": unknown_probe_results
+            "eer_threshold": round(eer_threshold, 4) if eer_threshold is not None else None
+        }
     }
 
     report_json_path = os.path.join(REPORT_DIR, "real_evaluation_report.json")
