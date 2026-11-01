@@ -112,6 +112,16 @@ def load_manifest_split_crops(manifest_path=MANIFEST_PATH, padding=0.12):
 # 2. Photometric & Geometric Data Augmentation (Training Only)
 # ---------------------------------------------------------------------------
 
+def extract_embeddings_batched(model, images, batch_size=16):
+    """Safely extracts embeddings in batches on CPU to prevent OOM."""
+    embs_list = []
+    n = len(images)
+    for i in range(0, n, batch_size):
+        bx = tf.constant(images[i : i + batch_size])
+        embs_list.append(model(bx, training=False).numpy())
+    return np.concatenate(embs_list, axis=0)
+
+
 @tf.function
 def augment_training_batch(images, seed=42):
     """
@@ -192,12 +202,14 @@ def train_experiment(
 
     # Initialise prototypes if used
     if use_prototypes:
-        initial_embs = model(train_images, training=False).numpy()
+        initial_embs = extract_embeddings_batched(model, train_images, batch_size=16)
         proto_mem.initialise_from_embeddings(initial_embs, train_labels)
 
     # Tracking
     history = {"loss": [], "val_loss": [], "acc": [], "val_acc": []}
     best_val_loss = float("inf")
+    best_weights = None
+    best_proto_state = None
     best_weights_path = os.path.join(CHECKPOINTS_DIR, f"{exp_id}.weights.h5")
     best_proto_path = os.path.join(MODELS_DIR, f"{exp_id}_prototypes.npy")
 
@@ -293,9 +305,9 @@ def train_experiment(
 
         if val_loss < best_val_loss:
             best_val_loss = val_loss
-            model.save_weights(best_weights_path)
+            best_weights = [w.copy() for w in model.get_weights()]
             if use_prototypes:
-                proto_mem.save(best_proto_path)
+                best_proto_state = proto_mem.get_prototypes().copy()
 
     # -------------------------------------------------------------
     # STAGE 2: Fine-Tune Upper MobileNetV2 Layers
@@ -306,7 +318,7 @@ def train_experiment(
 
     total_steps_s2 = stage2_epochs * (n_train // batch_size + 1)
     lr_schedule_s2 = tf.keras.optimizers.schedules.CosineDecay(
-        initial_learning_rate=5e-5, decay_steps=total_steps_s2, alpha=0.20
+        initial_learning_rate=2e-5, decay_steps=total_steps_s2, alpha=0.25
     )
     optimizer_s2 = tf.keras.optimizers.Adam(learning_rate=lr_schedule_s2)
 
@@ -343,22 +355,38 @@ def train_experiment(
         if val_loss < best_val_loss:
             best_val_loss = val_loss
             patience_counter = 0
-            model.save_weights(best_weights_path)
+            best_weights = [w.copy() for w in model.get_weights()]
             if use_prototypes:
-                proto_mem.save(best_proto_path)
-            print(f"  --> Saved new best model checkpoint (Val Loss: {val_loss:.4f})")
+                best_proto_state = proto_mem.get_prototypes().copy()
+            print(f"  --> Captured new best validation state (Val Loss: {val_loss:.4f})")
         else:
             patience_counter += 1
             if patience_counter >= patience:
                 print(f"  [EarlyStopping] No improvement in validation loss for {patience} epochs.")
                 break
 
-    # Load best checkpoint for post-training evaluation
+    # Persist and return best checkpoint
     eval_model = create_embedding_model(embedding_dim=embedding_dim, backbone_trainable=False)
-    eval_model.load_weights(best_weights_path)
+    if best_weights is not None:
+        eval_model.set_weights(best_weights)
+        if os.path.exists(best_weights_path):
+            try:
+                os.remove(best_weights_path)
+            except Exception:
+                pass
+        eval_model.save_weights(best_weights_path)
+        print(f"  Saved best model weights -> {best_weights_path}")
 
-    if use_prototypes:
-        best_protos = PrototypeMemory.load(best_proto_path).get_prototypes()
+    if use_prototypes and best_proto_state is not None:
+        proto_mem._prototypes = best_proto_state
+        if os.path.exists(best_proto_path):
+            try:
+                os.remove(best_proto_path)
+            except Exception:
+                pass
+        proto_mem.save(best_proto_path)
+        best_protos = best_proto_state
+        print(f"  Saved best prototypes -> {best_proto_path}")
     else:
         best_protos = None
 
@@ -383,7 +411,7 @@ def evaluate_model(eval_model, test_data, classes, prototypes=None, linear_W=Non
     num_classes = len(classes)
 
     # 1. Extract Test Embeddings
-    test_embs = eval_model(test_images, training=False).numpy()  # (44, 512)
+    test_embs = extract_embeddings_batched(eval_model, test_images, batch_size=16)  # (44, 512)
 
     # 2. Closed-Set Predictions
     if prototypes is not None:
@@ -532,7 +560,10 @@ def main():
 
     all_results = {}
 
+    import gc
     for exp in experiments_def:
+        tf.keras.backend.clear_session()
+        gc.collect()
         exp_id = exp["id"]
         exp_name = exp["name"]
 
