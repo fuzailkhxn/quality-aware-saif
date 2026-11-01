@@ -68,6 +68,7 @@ class QualityAwareRecognizer:
                 # Attempt to load trained weights if present
                 candidate_paths = [
                     self.weights_path,
+                    os.path.join(_BASE_DIR, "checkpoints", "improved_embedding.weights.h5"),
                     os.path.join(_BASE_DIR, "checkpoints", "real_embedding.weights.h5"),
                     os.path.join(_BASE_DIR, "checkpoints", "demo_embedding.weights.h5"),
                     os.path.join(_BASE_DIR, "models", "embedding_model.weights.h5"),

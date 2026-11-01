@@ -144,7 +144,7 @@ def get_quality_assessor():
     return FaceQualityAssessor()
 
 @st.cache_resource
-def get_recognizer(engine_choice: str):
+def get_recognizer(engine_choice: str, checkpoint_choice: str = "✨ Improved Two-Stage Model"):
     detector = get_face_detector()
     assessor = get_quality_assessor()
     if "sface" in engine_choice.lower():
@@ -152,11 +152,20 @@ def get_recognizer(engine_choice: str):
         return QualityAwareRecognizer(engine="SFace-128", database=db, detector=detector, assessor=assessor)
     else:
         db = FaceDatabase(model_name="MobileNetV2-512", expected_dim=512)
-        weights_candidate = os.path.join(_ROOT, "checkpoints", "real_embedding.weights.h5")
+        if "previous" in checkpoint_choice.lower():
+            weights_candidate = os.path.join(_ROOT, "checkpoints", "real_embedding.weights.h5")
+        elif "prototype" in checkpoint_choice.lower():
+            weights_candidate = os.path.join(_ROOT, "checkpoints", "exp_b_prototypes_only.weights.h5")
+        else:
+            weights_candidate = os.path.join(_ROOT, "checkpoints", "improved_embedding.weights.h5")
+
+        if not os.path.exists(weights_candidate):
+            weights_candidate = os.path.join(_ROOT, "checkpoints", "real_embedding.weights.h5")
         if not os.path.exists(weights_candidate):
             weights_candidate = os.path.join(_ROOT, "checkpoints", "demo_embedding.weights.h5")
         if not os.path.exists(weights_candidate):
             weights_candidate = os.path.join(_ROOT, "models", "face_model.h5")
+
         return QualityAwareRecognizer(
             engine="MobileNetV2-512",
             database=db,
@@ -201,6 +210,20 @@ with st.sidebar:
         ),
     )
     
+    if "mobilenet" in engine_choice.lower():
+        checkpoint_choice = st.selectbox(
+            "Model Checkpoint Selection",
+            [
+                "✨ Improved Two-Stage Model (Face-Cropped, 65.9% Test Acc)",
+                "🧪 Prototype Memory Model (Exp B, 63.6% Test Acc, 0.698 AUC)",
+                "📦 Previous Model (Full-Image, 47.7% Test Acc)",
+            ],
+            index=0,
+            help="Select which trained checkpoint to load for feature extraction."
+        )
+    else:
+        checkpoint_choice = "SFace-128"
+
     st.divider()
     st.markdown("### 🧭 Navigation")
     section = st.radio(
@@ -232,7 +255,7 @@ with st.sidebar:
     st.markdown(f"**OpenCV:** {cv2.__version__}")
 
     # Database quick stats
-    recognizer = get_recognizer(engine_choice)
+    recognizer = get_recognizer(engine_choice, checkpoint_choice)
     db_stats = recognizer.database.get_stats()
     st.divider()
     st.markdown(f"### 🗄️ Database ({recognizer.database.model_name})")
@@ -323,13 +346,15 @@ if section == "🏠 Home / Dashboard":
         st.markdown("##### Local Model Checkpoints")
         sface_exists = os.path.exists(os.path.join(_ROOT, "models", "face_recognition_sface_2021dec.onnx"))
         yunet_exists = os.path.exists(os.path.join(_ROOT, "models", "face_detection_yunet_2023mar.onnx"))
+        improved_weights_exists = os.path.exists(os.path.join(_ROOT, "checkpoints", "improved_embedding.weights.h5"))
         real_weights_exists = os.path.exists(os.path.join(_ROOT, "checkpoints", "real_embedding.weights.h5"))
         demo_weights_exists = os.path.exists(os.path.join(_ROOT, "checkpoints", "demo_embedding.weights.h5"))
         
         st.write(f"- **YuNet Face Detector (ONNX):** {'✅ Available' if yunet_exists else '⚠️ Using Haar Fallback'}")
         st.write(f"- **SFace Recognizer (ONNX):** {'✅ Available (38 MB)' if sface_exists else '❌ Missing'}")
         st.write(f"- **MobileNetV2 Embedding Head:** ✅ ImageNet Backbone Initialized")
-        st.write(f"- **Real Trained Weights:** {'✅ Active (Trained on Real Faces)' if real_weights_exists else '⚠️ Train via train_real_dataset.py'}")
+        st.write(f"- **Improved Two-Stage Model:** {'✅ Active (Face-Cropped, 65.9% Test Acc)' if improved_weights_exists else '⚠️ Train via train_ablation_experiments.py'}")
+        st.write(f"- **Previous Baseline Model:** {'✅ Preserved (Full-Image, 47.7% Test Acc)' if real_weights_exists else '⚠️ Not Available'}")
         st.write(f"- **Demo Checkpoint Weights:** {'✅ Available' if demo_weights_exists else '⚠️ Run train_demo.py to generate'}")
 
 
@@ -821,3 +846,28 @@ elif section == "📊 Evaluation & Benchmarking":
         st.markdown("---")
         st.subheader("Saved Verification ROC Curve")
         st.image(roc_path, caption="ROC Curve (reports/roc_curve.png)", width=600)
+
+    # Display systematic ablation comparison
+    ablation_chart = os.path.join(_ROOT, "reports", "ablation_comparison.png")
+    if os.path.exists(ablation_chart):
+        st.markdown("---")
+        st.subheader("🔬 Systematic Ablation & Baseline Comparison")
+        st.image(ablation_chart, caption="Held-Out Test Performance Across Configurations", use_container_width=True)
+
+    ablation_json = os.path.join(_ROOT, "reports", "ablation_study_results.json")
+    if os.path.exists(ablation_json):
+        with open(ablation_json, "r") as f:
+            ab_data = json.load(f)
+        table_rows = []
+        for k, v in ab_data.items():
+            tm = v["test_metrics"]
+            table_rows.append({
+                "Configuration": v["name"],
+                "Test Accuracy": f"{tm['accuracy']*100:.2f}%",
+                "Macro Precision": f"{tm['macro_precision']:.4f}",
+                "Macro Recall": f"{tm['macro_recall']:.4f}",
+                "Macro F1": f"{tm['macro_f1']:.4f}",
+                "Verification AUC": f"{tm['roc_auc']:.4f}",
+                "EER": f"{tm['eer']:.4f}",
+            })
+        st.dataframe(pd.DataFrame(table_rows), hide_index=True)

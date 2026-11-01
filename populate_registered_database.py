@@ -57,7 +57,9 @@ def sync_registered_folders():
 
 def populate_engine_database(engine_choice: str):
     print(f"\n=== [2/3] Populating Database for Engine: {engine_choice} ===")
-    weights_path = os.path.join(BASE_DIR, "checkpoints", "real_embedding.weights.h5")
+    weights_path = os.path.join(BASE_DIR, "checkpoints", "improved_embedding.weights.h5")
+    if not os.path.exists(weights_path):
+        weights_path = os.path.join(BASE_DIR, "checkpoints", "real_embedding.weights.h5")
     if not os.path.exists(weights_path):
         weights_path = os.path.join(BASE_DIR, "checkpoints", "demo_embedding.weights.h5")
 
