@@ -152,7 +152,9 @@ def get_recognizer(engine_choice: str):
         return QualityAwareRecognizer(engine="SFace-128", database=db, detector=detector, assessor=assessor)
     else:
         db = FaceDatabase(model_name="MobileNetV2-512", expected_dim=512)
-        weights_candidate = os.path.join(_ROOT, "checkpoints", "demo_embedding.weights.h5")
+        weights_candidate = os.path.join(_ROOT, "checkpoints", "real_embedding.weights.h5")
+        if not os.path.exists(weights_candidate):
+            weights_candidate = os.path.join(_ROOT, "checkpoints", "demo_embedding.weights.h5")
         if not os.path.exists(weights_candidate):
             weights_candidate = os.path.join(_ROOT, "models", "face_model.h5")
         return QualityAwareRecognizer(
@@ -321,11 +323,13 @@ if section == "🏠 Home / Dashboard":
         st.markdown("##### Local Model Checkpoints")
         sface_exists = os.path.exists(os.path.join(_ROOT, "models", "face_recognition_sface_2021dec.onnx"))
         yunet_exists = os.path.exists(os.path.join(_ROOT, "models", "face_detection_yunet_2023mar.onnx"))
+        real_weights_exists = os.path.exists(os.path.join(_ROOT, "checkpoints", "real_embedding.weights.h5"))
         demo_weights_exists = os.path.exists(os.path.join(_ROOT, "checkpoints", "demo_embedding.weights.h5"))
         
         st.write(f"- **YuNet Face Detector (ONNX):** {'✅ Available' if yunet_exists else '⚠️ Using Haar Fallback'}")
         st.write(f"- **SFace Recognizer (ONNX):** {'✅ Available (38 MB)' if sface_exists else '❌ Missing'}")
         st.write(f"- **MobileNetV2 Embedding Head:** ✅ ImageNet Backbone Initialized")
+        st.write(f"- **Real Trained Weights:** {'✅ Active (Trained on Real Faces)' if real_weights_exists else '⚠️ Train via train_real_dataset.py'}")
         st.write(f"- **Demo Checkpoint Weights:** {'✅ Available' if demo_weights_exists else '⚠️ Run train_demo.py to generate'}")
 
 

@@ -281,17 +281,20 @@ class QualityAwareTrainer:
                 raw_np, blur_threshold=self.quality_blur_threshold
             )
             quality_tf = tf.constant(quality, dtype=tf.float32)
+            prototypes_tf = tf.constant(self.prototype_memory.get_prototypes(), dtype=tf.float32)
 
             if training:
                 loss_val, preds = self._train_step(
-                    batch_images, batch_labels, quality_tf
+                    batch_images, batch_labels, quality_tf, prototypes_tf
                 )
-                # Update prototypes after each training step
+                # Update prototypes after each training step using quality-weighted EMA
                 embeddings_np = self.model(batch_images, training=False).numpy()
                 int_labels = np.argmax(batch_labels.numpy(), axis=1)
                 self.prototype_memory.update(embeddings_np, int_labels, quality)
             else:
-                loss_val, preds = self._val_step(batch_images, batch_labels, quality_tf)
+                loss_val, preds = self._val_step(
+                    batch_images, batch_labels, quality_tf, prototypes_tf
+                )
 
             # Accuracy
             pred_classes = tf.argmax(preds, axis=1)
@@ -317,11 +320,14 @@ class QualityAwareTrainer:
         images: tf.Tensor,
         labels: tf.Tensor,
         quality: tf.Tensor,
+        prototypes: Optional[tf.Tensor] = None,
     ) -> Tuple[tf.Tensor, tf.Tensor]:
         vars_list = self.trainable_variables
         with tf.GradientTape() as tape:
             embeddings = self.model(images, training=True)
-            loss = self.loss_fn(labels, embeddings, quality_scores=quality)
+            loss = self.loss_fn(
+                labels, embeddings, quality_scores=quality, prototypes=prototypes
+            )
 
         grads = tape.gradient(loss, vars_list)
         # Filter None gradients (e.g. from frozen backbone layers) and pair with variables
@@ -347,8 +353,9 @@ class QualityAwareTrainer:
             raw_np, blur_threshold=self.quality_blur_threshold
         )
         quality_tf = tf.constant(quality, dtype=tf.float32)
+        prototypes_tf = tf.constant(self.prototype_memory.get_prototypes(), dtype=tf.float32)
 
-        loss_val, preds = self._train_step(images, labels, quality_tf)
+        loss_val, preds = self._train_step(images, labels, quality_tf, prototypes_tf)
         embeddings_np = self.model(images, training=False).numpy()
         int_labels = np.argmax(labels.numpy(), axis=1)
         self.prototype_memory.update(embeddings_np, int_labels, quality)
@@ -365,9 +372,12 @@ class QualityAwareTrainer:
         images: tf.Tensor,
         labels: tf.Tensor,
         quality: tf.Tensor,
+        prototypes: Optional[tf.Tensor] = None,
     ) -> Tuple[tf.Tensor, tf.Tensor]:
         embeddings = self.model(images, training=False)
-        loss = self.loss_fn(labels, embeddings, quality_scores=quality)
+        loss = self.loss_fn(
+            labels, embeddings, quality_scores=quality, prototypes=prototypes
+        )
         W_norm = tf.math.l2_normalize(self.loss_fn.W, axis=0)
         logits = tf.matmul(tf.math.l2_normalize(embeddings, axis=1), W_norm)
         return loss, logits

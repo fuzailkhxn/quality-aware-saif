@@ -129,19 +129,21 @@ class AdaptiveMarginLoss(tf.keras.losses.Loss):
         y_pred: tf.Tensor,
         sample_weight: Optional[tf.Tensor] = None,
         quality_scores: Optional[tf.Tensor] = None,
+        prototypes: Optional[tf.Tensor] = None,
     ) -> tf.Tensor:
         """
-        Callable interface allowing either sample_weight or quality_scores.
+        Callable interface allowing either sample_weight, quality_scores, or prototypes.
         """
         if quality_scores is None and sample_weight is not None:
             quality_scores = sample_weight
-        return self.call(y_true, y_pred, quality_scores=quality_scores)
+        return self.call(y_true, y_pred, quality_scores=quality_scores, prototypes=prototypes)
 
     def call(
         self,
         y_true: tf.Tensor,
         y_pred: tf.Tensor,
         quality_scores: Optional[tf.Tensor] = None,
+        prototypes: Optional[tf.Tensor] = None,
     ) -> tf.Tensor:
         """
         Compute the adaptive margin loss.
@@ -154,6 +156,10 @@ class AdaptiveMarginLoss(tf.keras.losses.Loss):
             L2-normalised embedding vectors from the model.
         quality_scores : tf.Tensor, shape (batch,) or None
             Per-sample quality scores in [0,1]. If None, all set to 1.0.
+        prototypes : tf.Tensor, shape (num_classes, embedding_dim) or None
+            Empirical prototype vectors from PrototypeMemory. When provided,
+            sample difficulty is computed from cosine similarity to the
+            empirical class prototype cos(f_i, P_yi).
 
         Returns
         -------
@@ -171,34 +177,52 @@ class AdaptiveMarginLoss(tf.keras.losses.Loss):
         cos_theta = tf.matmul(emb_norm, W_norm)                   # (B, C)
         cos_theta = tf.clip_by_value(cos_theta, -1.0 + 1e-7, 1.0 - 1e-7)
 
-        # 3. Compute similarity to ground-truth class for each sample
-        #    Used for adaptive margin calculation
+        # 3. Ground truth labels
         gt_labels = tf.argmax(y_true, axis=1)                     # (B,)
         one_hot = tf.one_hot(gt_labels, self.num_classes)          # (B, C)
 
-        # cos(θ_yi) — similarity to the correct class
-        cos_gt = tf.reduce_sum(cos_theta * one_hot, axis=1)        # (B,)
+        # cos(θ_yi) — similarity to linear classification weight
+        cos_gt_linear = tf.reduce_sum(cos_theta * one_hot, axis=1) # (B,)
 
-        # 4. Adaptive margin per sample
-        #    margin_i = m_base + λ · (1 − cos_gt_i)
-        #    Samples far from prototype → larger margin (harder task)
-        adaptive_margin = self.base_margin + self.adaptive_lambda * (1.0 - cos_gt)
+        # 4. Prototype-Aware Sample Difficulty Calculation (Objective C)
+        #    When empirical prototypes are provided, difficulty is directly
+        #    measured as distance from the empirical prototype center: (1 - cos(f_i, P_yi))
+        if prototypes is not None:
+            proto_tensor = tf.cast(prototypes, tf.float32)
+            # Check if prototypes are non-zero / initialised
+            proto_norms = tf.norm(proto_tensor, axis=1)            # (C,)
+            has_valid_protos = tf.reduce_all(proto_norms > 1e-4)
+
+            P_norm = tf.math.l2_normalize(proto_tensor, axis=1)    # (C, D)
+            P_gt = tf.gather(P_norm, gt_labels)                     # (B, D)
+            cos_proto = tf.reduce_sum(emb_norm * P_gt, axis=1)      # (B,)
+            cos_proto = tf.clip_by_value(cos_proto, -1.0 + 1e-7, 1.0 - 1e-7)
+
+            # Use prototype similarity if valid, else fall back to linear weights
+            cos_difficulty = tf.where(has_valid_protos, cos_proto, cos_gt_linear)
+        else:
+            cos_difficulty = cos_gt_linear
+
+        # 5. Adaptive margin per sample
+        #    margin_i = clip(m_base + λ · (1 − cos(f_i, P_yi)), m_min, m_max)
+        #    Samples far from prototype → larger margin (pushed harder)
+        adaptive_margin = self.base_margin + self.adaptive_lambda * (1.0 - cos_difficulty)
         adaptive_margin = tf.clip_by_value(
             adaptive_margin, self.margin_min, self.margin_max
         )                                                           # (B,)
 
-        # 5. Apply margin: add margin to the target-class angle
-        theta_gt = tf.acos(cos_gt)                                  # (B,)
+        # 6. Apply margin: add margin to the target-class angle
+        theta_gt = tf.acos(cos_gt_linear)                           # (B,)
         theta_margin = theta_gt + adaptive_margin                   # (B,)
         theta_margin = tf.clip_by_value(theta_margin, 0.0, np.pi)
 
         cos_theta_margin = tf.cos(theta_margin)                     # (B,)
 
-        # 6. Replace the ground-truth class logit with the margined version
+        # 7. Replace the ground-truth class logit with the margined version
         logits = cos_theta * (1.0 - one_hot) + cos_theta_margin[:, None] * one_hot
         logits = logits * self.scale                                # (B, C)
 
-        # 7. Cross-entropy loss per sample (un-reduced)
+        # 8. Cross-entropy loss per sample (un-reduced)
         per_sample_loss = tf.nn.softmax_cross_entropy_with_logits(
             labels=y_true, logits=logits
         )                                                           # (B,)

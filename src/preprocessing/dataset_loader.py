@@ -463,3 +463,44 @@ def unpack_recordio(rec_path: str, idx_path: str, output_dir: str) -> int:
 
     print(f"[RecordIO] Extracted {total_images} images successfully.")
     return total_images
+
+
+def load_split_from_manifest(
+    manifest_path: str = "dataset/split_manifest.json"
+) -> Tuple[Dict[str, List[str]], Dict[str, List[str]], Dict[str, List[str]], Dict[str, List[str]], List[str]]:
+    """
+    Load train, val, test, and unknown splits from a JSON manifest.
+
+    Parameters
+    ----------
+    manifest_path : str
+        Path to split_manifest.json.
+
+    Returns
+    -------
+    (train_dict, val_dict, test_dict, unknown_dict, class_names)
+    """
+    import json
+    with open(manifest_path, "r") as f:
+        manifest = json.load(f)
+
+    classes = manifest["classes"]
+    splits = manifest["splits"]
+
+    def _group_by_identity(item_list):
+        grouped: Dict[str, List[str]] = {}
+        for item in item_list:
+            ident = item["identity"]
+            path = item["path"]
+            if ident not in grouped:
+                grouped[ident] = []
+            grouped[ident].append(path)
+        return grouped
+
+    train_dict = _group_by_identity(splits["train"])
+    val_dict = _group_by_identity(splits["val"])
+    test_dict = _group_by_identity(splits["test"])
+    unknown_dict = _group_by_identity(splits.get("unknown_probe", []))
+
+    return train_dict, val_dict, test_dict, unknown_dict, classes
+

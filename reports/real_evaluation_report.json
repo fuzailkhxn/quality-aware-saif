@@ -1,0 +1,94 @@
+{
+  "dataset_summary": {
+    "classes": [
+      "amir",
+      "saif",
+      "salman",
+      "sharuk"
+    ],
+    "num_classes": 4,
+    "train_samples": 49,
+    "val_samples": 10,
+    "test_samples": 10,
+    "unknown_samples": 1,
+    "dataset_split_rule": "70% train / 15% val / 15% test identity-balanced, zero-leakage",
+    "adnan_status": "Excluded from 4-class training due to single image; used as unknown probe"
+  },
+  "training_details": {
+    "model_architecture": "MobileNetV2 (512-d L2-normalized embedding head)",
+    "execution_device": "CPU",
+    "epochs_trained": 11,
+    "batch_size": 7,
+    "total_time_seconds": 128.59,
+    "final_train_loss": 18.5331,
+    "final_train_acc": 0.8571,
+    "final_val_loss": 14.592,
+    "final_val_acc": 0.9,
+    "dense_weight_delta_l2": 3.920672,
+    "loss_w_delta_l2": 0.33875
+  },
+  "held_out_test_metrics": {
+    "sample_count": 10,
+    "accuracy": 0.6,
+    "macro_precision": 0.5,
+    "macro_recall": 0.4286,
+    "macro_f1": 0.4583,
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ]
+    ],
+    "per_class_f1": {
+      "amir": 1.0,
+      "saif": 0.8333,
+      "salman": 0.0,
+      "sharuk": 0.0
+    }
+  },
+  "verification_metrics_exploratory": {
+    "genuine_pairs_count": 21,
+    "impostor_pairs_count": 24,
+    "genuine_mean_sim": 0.3468,
+    "impostor_mean_sim": 0.1691,
+    "roc_auc": 0.7044,
+    "eer": 0.378,
+    "eer_threshold": 0.2965,
+    "note": "Reported as exploratory estimate due to small held-out test size (N=10)"
+  },
+  "unknown_probe_evaluation": [
+    {
+      "path": "dataset/adnan/person.jpg",
+      "similarities": {
+        "amir": 0.4046849012374878,
+        "saif": -0.2301436811685562,
+        "salman": 0.3541029691696167,
+        "sharuk": 0.5906982421875
+      },
+      "max_similarity": 0.5906982421875,
+      "closest_identity": "sharuk",
+      "rejected_at_0_60_threshold": true,
+      "rejected_at_0_70_threshold": true
+    }
+  ]
+}
