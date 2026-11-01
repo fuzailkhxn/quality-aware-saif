@@ -68,17 +68,24 @@ class QualityAwareRecognizer:
                 # Attempt to load trained weights if present
                 candidate_paths = [
                     self.weights_path,
+                    os.path.join(_BASE_DIR, "checkpoints", "real_embedding.weights.h5"),
+                    os.path.join(_BASE_DIR, "checkpoints", "demo_embedding.weights.h5"),
                     os.path.join(_BASE_DIR, "models", "embedding_model.weights.h5"),
                     os.path.join(_BASE_DIR, "models", "face_model.h5"),
                 ]
                 for p in candidate_paths:
                     if p and os.path.exists(p):
                         try:
-                            self._mobilenet_model.load_weights(p, by_name=True, skip_mismatch=True)
+                            self._mobilenet_model.load_weights(p)
                             print(f"[QualityAwareRecognizer] Loaded MobileNetV2 weights from {p}")
                             break
-                        except Exception as w_err:
-                            pass
+                        except Exception as w_err1:
+                            try:
+                                self._mobilenet_model.load_weights(p, by_name=True, skip_mismatch=True)
+                                print(f"[QualityAwareRecognizer] Loaded MobileNetV2 weights from {p} (by_name)")
+                                break
+                            except Exception as w_err2:
+                                pass
             except Exception as e:
                 print(f"[QualityAwareRecognizer] Notice: MobileNetV2 initialization message: {e}")
 
